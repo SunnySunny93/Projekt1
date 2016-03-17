@@ -1,0 +1,16 @@
+Projektidee von Annika Bode, 2116458
+
+Dame (Brettspiel) Clone
+
+Im Projekt soll das klassische Dame Brettspiel verwirklicht werden.
+Das Dame Spiel soll von zwei Usern genutzt werden. Sollte der Zeitumfang es zulassen kann noch ein NPC programmiert werden.
+Dazu müssen die Spielregeln umgesetzt werden und ein Spielfeld muss dargestellt werden.
+Die Spieler können ihren Namen eintragen. Dann kann ausgegeben werden, wer gerade am Zug ist und später auch wer gewonnen hat.
+Zusätzlich dazu können Daten von den beiden Spielern gesammelt und ausgegeben werden:
+- Züge
+- Spieldauer
+- Siege
+- Zeit pro Zug
+
+
+Ich bin derzeit noch ohne Partner.
