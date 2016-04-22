@@ -1,4 +1,51 @@
+===================================
+=== Feedback Alpers, 2016-04-22 ===
+===================================
+
+Leider hatte ich beim letzten Mal einen wichtigen Hinweis vergessen: Es ist wichtig, dass Sie die Interaktion bzw. den Spielablauf schildern. In anderen Worten: Sie und viele Menschen wissen, wie Dame gespielt wird. Der Computer weiß das nicht und deshalb müssen Sie es auch detailliert notieren. Sonst kommen Sie später in die Bredouille, weil Sie keine genaue Vorgabe haben, was Sie umsetzen müssen. Und wenn Sie in einem Team tätig sind, kann es durchaus sein, dass Sie diese Dinge vorgeben und jemand anders Sie umsetzen muss. Wenn dann in der Konzeptionsphase etwas vergessen wurde, wird die Software Mängel haben.
+
+(1.Aufgabe) Tragen Sie deshalb bitte die Regeln nach. Nehmen Sie sich dafür bitte Zeit, um sicherzustellen, dass Sie tatsächlich das Regelwerk vollständig notiert haben.
+
+(2. Aufgabe) Da Ihr Spiel ja nur sehr beschränkte Möglichkeiten hat, haben Sie eine Sonderaufgabe: Nachdem Sie die Regeln für das klassische Dame notiert haben, denken Sie sich Erweiterungen aus. Seien Sie da nicht zu beschränkt: Wie wäre es mit einem veränderten Spielbrett? Wie wäre es mit einem Brett, bei dem die Anzahl Kanten zwar immer noch bei jedem Feld gleich ist, aber es sind nicht mehr vier, sondern drei oder fünf oder zehn oder ...? Wie wäre es mit mehr Spielern? Wie wäre es mit unterschiedlichen Spielsteinen? Was ist mit einem 3D- oder sogar 4D-Dame? usw. Vergessen Sie nicht: Es geht momentan um die Konzeption und später um das Umsetzen der Regeln, nicht um die Visualisierung bzw. das Design. Wenn die sich als zu schwer erweisen, ist das kein Problem; mir ist es wichtig, dass Sie sich auf das Umsetzen der Sturkturen und Regeln in ein Programm konzentrieren und nicht auf die Umsetzung des Designs.
+
+Investieren Sie hier bitte wenigstens zwei Stunden, um sich weitere Möglichkeiten zu überlegen, arbeiten Sie dann die einzelnen Varianten aus.
+
+(3. Aufgabe) Ergänzen Sie jetzt die Beschreibung der zusätzlichen nötigen strukturellen Elemente und ändern Sie bestehende Elemente bei Bedarf ab. Bitte teilen Sie die Elemente noch nicht in Ansichten auf. Das wird Teil der nächsten Aufgabe werden.
+
+=====================================
+=== Projektdokumtation 14.04.2016 ===
+=====================================
+
+Feedback erhalten von SvenMarderer: "Nichts zu ergänzen" --18:20--
+
+TheCanadians: Projekt-A, Arler Erde
+- strukt.html bearbeitet
+
+Temm13: Projekt_1, Reaktionsspiel
+- strukt.html bearbeitet
+  - Spielfeld mit Formen (Löcher)
+  - Bewegte Form muss ins Loch passen
+  - Eingabe vom Spieler
+
+Szai: Werterechner
+--> keine strukt.html vorhanden
+
+SvenMarderer: Projekt1, Betrayal at house on the hill
+- strukt.html bearbeitet
+  - Karten
+  - Spielfeld
+  - Würfel
+  - 3 Kartenstapel
+  
+SusannaAlbrecht: GitProjekt, Monopoly
+- strukt.html bearbeitet
+  - Spielfeld: Tabelle
+  
+HTML-Datei strukt.html erstellt.
+
+============================================
 === Projektidee SunnySunny93, 2016-04-05 ===
+============================================
 
 Dame (Brettspiel) Clone
 
