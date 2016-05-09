@@ -1,3 +1,9 @@
+2. Aufgabe: Erweiterungen
+
+- 2 * 2 Spieler auf einem Spielfeld: Das erste Spielerpaar spiel auf den dunklen Feldern und das zweite Paar auf den hellen Feldern.
+  Alle Spieler haben unterschiedlich farbliche Spielsteine. Die Schwierigkeit hierbei besteht für den Spieler den Überblick über seine Partie zu behalten und sich von den andern Spielsteinen nicht ablenken zu lassen.
+- Anderes Spielfeld: Die Idee eines Spielfelds aus Sechsecken. So ergeben sich auch 6 Aussenseiten und mehr Spielzug-Möglichkeiten.
+
 1. Aufgabe: Regelwerk
 
 Spielvorbereitung
