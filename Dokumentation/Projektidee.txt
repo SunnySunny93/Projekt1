@@ -1,3 +1,38 @@
+1. Aufgabe: Regelwerk
+
+Spielvorbereitung
+- Das Spielfeld besteht aus 64 Feldern (1-8 * a-h)
+- Die Felder sind abwechselnd verschieden farbig. (Schachbrettmuster)
+- Die zwei untereschiedlichen Spielsteine werden in je 3 Reihen an 
+  beiden Enden des Spielfeldes jeweils auf die gleichfarbigen Felder gelegt.
+- Insgesamt hat jeder Spieler 12 Spielsteine auf seiner Seite.
+
+Ziehen eines Steins
+- Jeder Stein darf nur diagonal auf das nächste gleichfarbige Feld gezogen werden.
+- Jeder Stein darf vorwärts gezogen werden.
+- Zusätzlich dürfen die Damen auch rückwärts ziehen.
+
+Schlagen
+- Wenn der Spieler mit seinem eingenen Stein diagonal über einen gegnerischen Stein
+  auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
+- Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
+- Das erste Schlagen eines Steins muss durchgeführt werden, 
+  jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
+  
+In Dame umwandeln
+- Hat ein Spielstein die gegnerische Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
+- Damen dürfen vorwärts und rückwärts ziehen und schlagen.
+
+Spielende
+- Wenn ein Spieler keine Steine mehr hat.
+- Wenn ein Spieler keine Spielzüge mehr durchführen kann.
+- Wenn ein Spieler aufgibt.
+
+Unentschieden
+- Wenn beide Spieler gemeinsam aufgeben.
+- Wenn 25 Züge gespielt worden ohne eines Schlags oder Erhalt einer Dame.
+- Wenn eine Stellung sich zum 3. Mal in Folge wiederholt.
+
 ===================================
 === Feedback Alpers, 2016-04-22 ===
 ===================================
