@@ -125,7 +125,7 @@ Investieren Sie hier bitte wenigstens zwei Stunden, um sich weitere Möglichkeit
 (3. Aufgabe) Ergänzen Sie jetzt die Beschreibung der zusätzlichen nötigen strukturellen Elemente und ändern Sie bestehende Elemente bei Bedarf ab. Bitte teilen Sie die Elemente noch nicht in Ansichten auf. Das wird Teil der nächsten Aufgabe werden.
 
 ===================================
-=== Feedback Alpers, 2016-04-06 ===
+=== Feedback Alpers, 2016-05-31 ===
 ===================================
 
 Die Beschreibung hat einen sehr guten Detailgrad: Nicht zu umfangreich, aber die essentiellen Punkte sind aufgeführt.
@@ -144,3 +144,9 @@ Wertung 2: Projektbeschreibung: gesamt: 7 / 10
 - Voraussetzung bekannten Wissens: 0 
 
 Schade, dass Sie an der strukt.html noch nicht weiter gearbeitet haben.
+
+===================================
+=== Feedback Alpers, 2016-06-27 ===
+===================================
+
+Wichtig: Die Einbindung des Computers als aktivem Teil des Programms (siehe Hinweise auf Interaktion) ist wichtig. Bitte arbeiten Sie hieran noch weiter.
