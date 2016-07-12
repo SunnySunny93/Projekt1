@@ -1,4 +1,4 @@
-2. Aufgabe: Erweiterungen
+﻿2. Aufgabe: Erweiterungen
 
 - 2 * 2 Spieler auf einem Spielfeld: Das erste Spielerpaar spiel auf den dunklen Feldern und das zweite Paar auf den hellen Feldern.
   Alle Spieler haben unterschiedlich farbliche Spielsteine. Die Schwierigkeit hierbei besteht für den Spieler den Überblick über seine Partie zu behalten und sich von den andern Spielsteinen nicht ablenken zu lassen.
@@ -150,3 +150,14 @@ Schade, dass Sie an der strukt.html noch nicht weiter gearbeitet haben.
 ===================================
 
 Wichtig: Die Einbindung des Computers als aktivem Teil des Programms (siehe Hinweise auf Interaktion) ist wichtig. Bitte arbeiten Sie hieran noch weiter.
+
+
+==============================
+===   Anmerkung 2016-07-12 ===
+==============================
+
+Auf Grund der Hausarbeit von MINF musste das Projekt A leider ruhen. 
+Da jetzt aber auch alle Aufgaben vollständig vorhanden sind, werde ich mich jetzt als nächstes wieder hierran setzen.
+Ich habe noch nicht aufgegeben. ;)
+
+===================================
