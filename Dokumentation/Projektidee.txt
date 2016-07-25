@@ -151,7 +151,6 @@ Schade, dass Sie an der strukt.html noch nicht weiter gearbeitet haben.
 
 Wichtig: Die Einbindung des Computers als aktivem Teil des Programms (siehe Hinweise auf Interaktion) ist wichtig. Bitte arbeiten Sie hieran noch weiter.
 
-
 ==============================
 ===   Anmerkung 2016-07-12 ===
 ==============================
@@ -161,3 +160,15 @@ Da jetzt aber auch alle Aufgaben vollständig vorhanden sind, werde ich mich jet
 Ich habe noch nicht aufgegeben. ;)
 
 ===================================
+=== Feedback Alpers, 2016-07-25 ===
+===================================
+
+Wenn Sie die Beschreibung erweitern, dann tragen Sie bitte dennoch den gesamten aktuellen Stand der Beschreibung als einen Block ein. Um ggf. den Vergleich zwischen den verschiedenen Ständen zu erleichtern, können Sie durchaus mehrere Beschreibungen eintragen. In dem Fall müssen Sie zwar eine Datum dazu notieren, damit erkennbar ist, welche Beschreibung zum welchem Zeitpunkt aktuell war, aber das ist eine Möglichkeit.
+
+Wenn Sie dagegen (so wie hier) Erweiterungen jeweils aus dem Kontext reißen, indem Sie sie als eigenständige Beschreibung positionieren, dann macht das die Nutzung für neue Teammitglieder schwer bis unmöglich, weil häufig nicht erkennbar ist, was tatsächliche Beschreibung und was überholt ist.
+
+Nun zum Feedback:
+
+(1) Leider haben Sie immer noch keine vollwertige Webbasierung integriert, sondern beschreiben lediglich das klassische Brettspiel 1:1 als Computerspiel und das genügt für das Projekt nicht. Sie müssen sich vielmehr überlegen, wie Sie die klassische Grundidee so erweitern können, dass deutlich mehr als zwei Spieler an einer Partie teilnehmen können. Wenn Ihnen nicht einfällt, wie Sie das programmieren sollen oder wie eine solche Partie dargestellt werden kann, dann ist das kein Problem, denn sie haben zum einen vier Semester lang Kurse, in denen sie die Grundlagen von Programmierung erlernen und zum anderen studieren Sie ja kein Design (wo wir die Frage klären, wie etwas dargestellt werden kann).
+
+(2) Sie haben auch die Hinweise zum Thema Interaktion (die zum Teil Adaption umfasst) noch nicht vollständig umgesetzt. Denn die würden bei Ihrem Projekt auf jeden Fall NSCs bedeuten.
