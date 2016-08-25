@@ -207,7 +207,7 @@ Spielvorbereitung
 - Insgesamt hat jeder Spieler 12 Spielsteine auf seiner Seite, welche in 2 Reihen aufgestellt werden (Die Eckpunkte bleiben in 3 Reihen frei).
 
 Ziehen eines Steins
-- Jeder Stein darf vorwärts gezogen werden.
+- Jeder Stein darf pro Zug ein Feld vorwärts gezogen werden.
 - Zusätzlich dürfen die Damen auch rückwärts ziehen.
 - Mauerflächen dürfen nicht betreten oder übersprungen werden.
 - Wenn ein Spieler durch Mauern keinen Zug machen kann darf trotzdem seine Karte ausspielen.
