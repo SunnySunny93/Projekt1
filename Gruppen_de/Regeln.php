@@ -15,7 +15,6 @@
 				<li>Insgesamt hat jeder Spieler 12 Spielsteine auf seiner Seite, welche in 2 Reihen aufgestellt werden (Die Eckpunkte bleiben in 3 Reihen frei).</li>
 			</ul>
 		</p>
-
 		<p>
 			<h2>Ziehen eines Steins</h2>
 			<ul>
