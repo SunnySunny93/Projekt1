@@ -15,13 +15,13 @@
 			<fieldset>
 				<table>
 					<tr>
-						<td><input type="radio" id="kreis" name="spielstein" value="kreis"><label for="spielstein"> Keis</label></td><td><input type=img<!-- Bilddatei für Stein hier einfügen --></td>
+						<td><input type="radio" id="kreis" name="spielstein" value="kreis"><label for="spielstein"> Keis</label></td><td><img src="kreis.png" alt="Bild vom Kreis"><!-- Bilddatei für Stein hier einfügen --></td>
 					</tr>
 					<tr>
-						<td><input type="radio" id="quadrat" name="spielstein" value="quadrat"><label for="spielstein"> Quadrat</label></td><!-- Bilddatei für Stein hier einfügen --><td></td>
+						<td><input type="radio" id="quadrat" name="spielstein" value="quadrat"><label for="spielstein"> Quadrat</label></td><td><img src="quadrat.png" alt="Bild vom Quadrat"><!-- Bilddatei für Stein hier einfügen --></td>
 					</tr>
 					<tr>
-						<td><input type="radio" id="dreieck" name="spielstein" value="dreieck"><label for="spielstein"> Dreieck</label></td><!-- Bilddatei für Stein hier einfügen --><td></td>
+						<td><input type="radio" id="dreieck" name="spielstein" value="dreieck"><label for="spielstein"> Dreieck</label></td><td><img src="dreieck.png" alt="Bild vom Dreieck"><!-- Bilddatei für Stein hier einfügen --></td>
 					</tr>
 				</table>
 			</fieldset>
@@ -29,6 +29,25 @@
 			<input type="color" value="#ff0000">
 			
 			<!-- Bilddatei mit dem Fertigen Spielstein -->
+			
+			<!-- IV Spiel starten -->
+			<table>
+				<tr>
+					<td><label for="freund">Freund hinzufügen:</label></td> <td><input type="text" id="freund" name="freund"></td>
+				</tr>
+				<tr>
+					<td></td><td><input type="submit" value="hinzufügen"</td>
+				</tr>
+			</table>
+			
+			<h2>Spiele ein Spiel gegen zufällige andere Spieler</h2>
+			<input type="button" value="Einem zufälligen Spiel beitreten">
+			<h2>Oder lade Freunde in eine Partie ein</h2>
+			
+			<!-- Hier erscheinen die Mitspieler -->
+			<?php include(/Gruppen_de/Mitspieler.php) ?>
+			
+			<input type="submit" value="Spiel starten">
 		</main>
 	</body>
 </html>
