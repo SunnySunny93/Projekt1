@@ -45,7 +45,7 @@
 			<h2>Oder lade Freunde in eine Partie ein</h2>
 			
 			<!-- Hier erscheinen die Mitspieler -->
-			<?php include(/Gruppen_de/Mitspieler.php) ?>
+			<?php include("/Gruppen_de/Mitspieler.php"); ?>
 			
 			<input type="submit" value="Spiel starten">
 		</main>
