@@ -1,4 +1,4 @@
->!-- Spielstatistik -->
+<!-- Spielstatistik -->
 <table>
 	<tr>
 		<td><label for="nummer">Partienummer:</label></td><td></td>

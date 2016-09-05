@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<main>
-			<?php include(/Gruppen_de/statistik.php) ?>
+			<?php include("/Gruppen_de/statistik.php"); ?>
 		</main>
 	</body>
 </html>

@@ -13,7 +13,7 @@
 		<!-- I Spielfeld -->
 		<center>
 			Hier entsteht das Spielfeld
-			<?php include(/Gruppen_de/Spielbrett.php) ?>
+			<?php include("/Gruppen_de/Spielbrett.php"); ?>
 		</center>
 		
 		<!--Karten -->
@@ -22,6 +22,6 @@
 		</aside>
 		
 		Optionen
-		<?php include(/Gruppen_de/Optionen.php) ?>
+		<?php include("/Gruppen_de/Optionen.php"); ?>
 	</body>
 </html>
