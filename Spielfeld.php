@@ -51,15 +51,18 @@
 		?>
 		<!-- I Spielfeld -->
 		<center>
-			Hier entsteht das Spielfeld
 			<?php include("/Gruppen_de/Spielbrett.php"); ?>
 		</center>
 		
 		<!--Karten -->
-		<aside>
-			<img src="Kartenstapel.png" width="120" height="180" alt="Bild vom Kartenrücken"> <img src="Kartengezogen.png" width="120" height="180" alt="Das ist deine Karte"> <!-- Die gezogenen Handkarten können variiren -->
-		</aside>
-		
+		<?php
+			$kartenstapel = array("MEntfernen", "MVerschieben", "EinsSetzen", "ZweiSetzen", "DreiSetzen", "VierSetzen");
+			$zufallszahl = rand(0,5);
+			$karte = $kartenstapel[$zufallszahl];
+			print "<aside>";
+				print "<img src='/Bilder/Kartenstapel.png' width='120' height='180' alt='Bild vom Kartenrücken'> <img src='/Bilder/$karte.png' width='120' height='180' alt='Das ist deine Karte'>"; //<!-- Die gezogenen Handkarten können variiren -->
+			print "</aside>";
+		?>
 		Optionen
 		<?php include("/Gruppen_de/Optionen.php"); ?>
 	</body>
