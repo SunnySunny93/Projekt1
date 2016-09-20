@@ -6,25 +6,16 @@
 	</head>
 	<body>
 		<main>
+			<?php include("/Gruppen_de/spielstein.php"); ?>
 			<h1> Noch ein paar Einstellungen und dann kann es losgehen! </h1>
 			<!-- III Spielregeln -->
 			<h2> Die Spielregeln </h2>
 			<?php include("/Gruppen_de/Regeln.php"); ?>
 			
 			<h2> Wie soll dein Spielstein aussehen? </h2>
-			<?php
-				if( ! isset ( $_POST['spielstein'])){
-					$spielsteinausgabe = "Wähle deinen Spielstein";
-				} else {
-					$spielstein = .$_POST['spielstein'];
-					$farbe = .$_POST['farbe'];
-					$spielsteinausgabe = "Du hast einen $farbe $spielstein gewählt";
-				}
-			?>
-			<h2>
-			<?php print $spielsteinausgabe ?>
+			
 			</h2>
-			<form action="<?php print $_SERVER['PHP_SELF']?>" method="post">
+			<form action="spielstein.php" method="POST"> 
 			
 			<fieldset>
 				<table>
@@ -43,6 +34,8 @@
 			<input type="color" name="farbe" value="#ff0000">
 			
 			<input type="submit" value="Generiere Spielstein">
+			<img src= "spielstein.php" alt= "Hier entsteht der Spielstein"> <!-- Hier kommt Javascript hin? -->
+			
 			</form>
 			<!-- Bilddatei mit dem Fertigen Spielstein -->
 			
