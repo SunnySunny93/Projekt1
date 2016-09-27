@@ -1,4 +1,75 @@
-﻿2. Aufgabe: Erweiterungen
+﻿============================================
+=== Projektidee SunnySunny93, 2016-08-24 ===
+============================================
+
+Dame (Brettspiel) Clone
+
+Im Projekt soll das Erweiterung des klassischen Dame Brettspiel verwirklicht werden.
+
+Das Dame Spiel soll von bis zu 6 Usern genutzt werden. Diese können zum Teil von NPCs ersetzt werden.
+
+Dazu müssen die Spielregeln und das Spielfeld des normalen Dame Spiels überarbeitet werden.
+
+Die Spieler können ihren Namen eintragen. 
+
+Dann kann ausgegeben werden, wer gerade am Zug ist und später auch wer gewonnen hat.
+
+Zusätzlich dazu können Daten von den beiden Spielern gesammelt und ausgegeben werden:
+- Züge
+- Spieldauer
+- Siege
+- Zeit pro Zug 
+
+===========================================
+=== Regelwerk Überarbeitung, 2016-08-24 ===
+===========================================
+
+Spielvorbereitung
+- Das Spielfeld besteht aus 6eckigen Feldern(217) mit einer Kantenlänge von 9 Feldern.
+- Jeder Spieler fängt an einer Kannte des 6-Ecks an zu spielen.
+- Jeder Spieler erhält eine andere Farbe an Spielstein, zur besseren Orientierung.
+- Insgesamt hat jeder Spieler 12 Spielsteine auf seiner Seite, welche in 2 Reihen aufgestellt werden (Die Eckpunkte bleiben in 3 Reihen frei).
+
+Ziehen eines Steins
+- Jeder Stein darf pro Zug ein Feld vorwärts gezogen werden.
+- Zusätzlich dürfen die Damen auch rückwärts ziehen.
+- Mauerflächen dürfen nicht betreten oder übersprungen werden.
+- Wenn ein Spieler durch Mauern keinen Zug machen kann darf trotzdem seine Karte ausspielen.
+
+Mauerkarten
+- Jeder Spieler zieht am Anfang seines Zuges eine Karte.
+- Es gibt 3 Arten von Karten: Neue Mauer platzieren, Mauer verschieben, Mauer entfernen
+-- Mauern können 1 bis 4 Felder groß sein.
+-- Die Form der Mauer ist zufällig.
+-- Mauern dürfen nicht direkt vor einen gegnerischen Spielstein gesetzt werden.
+- Die Karte muss am Ende des Zuges ausgespielt werden.
+
+Schlagen
+- Wenn der Spieler mit seinem eingenen Stein direkt über einen gegnerischen Stein
+  auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
+- Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
+- Das erste Schlagen eines Steins muss durchgeführt werden, 
+  jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
+  
+In Dame umwandeln
+- Hat ein Spielstein die gegnerische direkt gegenüberliegende Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
+- Damen dürfen vorwärts und rückwärts ziehen und schlagen.
+- Damen dürfen keine Mauern überspringen.
+
+Spielende
+- Ein Spieler scheidet aus, wenn er keine Spielsteine mehr hat.
+- Wenn ein Spieler aufgibt.
+- Gewonnen hat der Spieler, der zuletzt noch Spielsteine hat.
+
+Unentschieden
+- Nicht vorgesehen bei diesem Spiel.
+
+==============================================================================
+=== Anm. Alpers:                                                           ===
+=== (Bislang am Anfang der Datei, Zeitstempel fehlt, vermutlich veraltet.) ===
+==============================================================================
+
+2. Aufgabe: Erweiterungen
 
 - 2 * 2 Spieler auf einem Spielfeld: Das erste Spielerpaar spiel auf den dunklen Feldern und das zweite Paar auf den hellen Feldern.
   Alle Spieler haben unterschiedlich farbliche Spielsteine. Die Schwierigkeit hierbei besteht für den Spieler den Überblick über seine Partie zu behalten und sich von den andern Spielsteinen nicht ablenken zu lassen.
@@ -173,69 +244,28 @@ Nun zum Feedback:
 
 (2) Sie haben auch die Hinweise zum Thema Interaktion (die zum Teil Adaption umfasst) noch nicht vollständig umgesetzt. Denn die würden bei Ihrem Projekt auf jeden Fall NSCs bedeuten.
 
+===================================
+=== Feedback Alpers, 2016-09-27 ===
+===================================
 
-============================================
-=== Projektidee SunnySunny93, 2016-08-24 ===
-============================================
+=== 1. Feedback zur Form ===
 
-Dame (Brettspiel) Clone
+1.1.) Die Form der Beschreibung ist sehr gut für ein Softwareprojekt: Sie haben jeweils eine knappe Zeile verfasst, aus der ein Aspekt des Spiels klar erkennbar ist.
 
-Im Projekt soll das Erweiterung des klassischen Dame Brettspiel verwirklicht werden.
+1.2.) Bitte fügen Sie Neuerungen an den Anfang an, damit andere Nutzer auf den ersten Blick den aktuellen Stand der Projektbeschreibung lesen können.
 
-Das Dame Spiel soll von bis zu 6 Usern genutzt werden. Diese können zum Teil von NPCs ersetzt werden.
+=== 2. Feedback zum Inhalt ===
 
-Dazu müssen die Spielregeln und das Spielfeld des normalen Dame Spiels überarbeitet werden.
+2.1.) Die Beschränkung auf sechs Spieler ist zwar etwas knapp, aber da Sie hier ein konsistentes Spielkonzept ausgearbeitet haben genügt das. (Als kleinen Hinweis für weitergehende Möglichkeiten: Überlegen Sie sich einmal, was Sie tun könnten, um das Spiel in eine 3D-Variante umzuwandeln, an der z.B. 36 Spieler gleichzeitig teilnehmen könnten.)
 
-Die Spieler können ihren Namen eintragen. 
+=== 3. Feedback bezüglich der Interaktion zwischen Spieler und Spiel ===
 
-Dann kann ausgegeben werden, wer gerade am Zug ist und später auch wer gewonnen hat.
+3.1.) Hier fehlt leider noch der entscheidende Teil. Denn zurzeit geben Sie lediglich an, dass es eine solche Interaktion geben soll, nicht wie die ablaufen könnte.
 
-Zusätzlich dazu können Daten von den beiden Spielern gesammelt und ausgegeben werden:
-- Züge
-- Spieldauer
-- Siege
-- Zeit pro Zug 
+=== 4. Hinweise auf Schwierigkeiten, die sich aus dem aktuellen Konzept ergeben. ===
 
-===========================================
-=== Regelwerk Überarbeitung, 2016-08-24 ===
-===========================================
+4.1.) Bei der Umsetzung werden Sie (da im aktuellen Projekt die Verwendung von canvas nicht erlaubt ist) eine Schwierigkeit lösen müssen: Sie haben für die Anzeige des Spielfelds lediglich rechteckige strukturellen Elemente zur Verfügung, benötigen also einen Work around, um damit sechseckige Felder darzustellen. Zumindest braucht das Ergebnis nicht gut auszusehen.
 
-Spielvorbereitung
-- Das Spielfeld besteht aus 6eckigen Feldern(217) mit einer Kantenlänge von 9 Feldern.
-- Jeder Spieler fängt an einer Kannte des 6-Ecks an zu spielen.
-- Jeder Spieler erhält eine andere Farbe an Spielstein, zur besseren Orientierung.
-- Insgesamt hat jeder Spieler 12 Spielsteine auf seiner Seite, welche in 2 Reihen aufgestellt werden (Die Eckpunkte bleiben in 3 Reihen frei).
+=== 5. Wertung ===
 
-Ziehen eines Steins
-- Jeder Stein darf pro Zug ein Feld vorwärts gezogen werden.
-- Zusätzlich dürfen die Damen auch rückwärts ziehen.
-- Mauerflächen dürfen nicht betreten oder übersprungen werden.
-- Wenn ein Spieler durch Mauern keinen Zug machen kann darf trotzdem seine Karte ausspielen.
-
-Mauerkarten
-- Jeder Spieler zieht am Anfang seines Zuges eine Karte.
-- Es gibt 3 Arten von Karten: Neue Mauer platzieren, Mauer verschieben, Mauer entfernen
--- Mauern können 1 bis 4 Felder groß sein.
--- Die Form der Mauer ist zufällig.
--- Mauern dürfen nicht direkt vor einen gegnerischen Spielstein gesetzt werden.
-- Die Karte muss am Ende des Zuges ausgespielt werden.
-
-Schlagen
-- Wenn der Spieler mit seinem eingenen Stein direkt über einen gegnerischen Stein
-  auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
-- Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
-- Das erste Schlagen eines Steins muss durchgeführt werden, 
-  jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
-  
-In Dame umwandeln
-- Hat ein Spielstein die gegnerische direkt gegenüberliegende Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
-- Damen dürfen vorwärts und rückwärts ziehen und schlagen.
-- Damen dürfen keine Mauern überspringen.
-
-Spielende
-- Ein Spieler scheidet aus, wenn er keine Spielsteine mehr hat.
-- Wenn ein Spieler aufgibt.
-- Gewonnen hat der Spieler, der zuletzt noch Spielsteine hat.
-
-Unentschieden
-- Nicht vorgesehen bei diesem Spiel.
+Die Wertung bleibt unverändert.

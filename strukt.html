@@ -1,81 +1,6 @@
-<!-- Ausgearbeitet von SunnySunny93, 14.04.16
-Strukturelle Elemente:
-
-Startseite:
-- Textfelder zum Eingeben der Spielernamen
-- Eingabemöglichkeit zum Erstellen eines oder mehrerer NPCs
-  - Eingabemöglichkeit zum Einstellen des Schwierigkeitsgrades des NPCs
-- Schaltfäche zum Öffnen der Spielregeln
-  - Spielregeln durch Absätze trennen
-- Schaltfäche zum Starten des Spiels
-
-
-Spielfeld:
-- Tabelle (8x8) als Spielfeld
- -> klickbare Bilddateien für die einzelnen Felder
-    - Weiße und Schwarze leere Felder
-	- Weiße und Schwarze Felder mit Spielsteinen
-- Textausgabe: Zugfeedback "Spieler{} zog von {} nach {}..."
-- Pause-Schaltfäche zum Anhalten der Zeit
-- Optionen-Schaltfäche
-- Schaltfäche für Spielzug rückgängig machen.
-
-Spielstatistik:
-- Textausgabe:
-  - Wer ist am Zug?
-  - Wie viele Züge sind gespielt?
-  - Wie lange dauert ein Zug?
-  - Wie lange dauert die Spielrunge (Partie)?
-  - Wer hat bisher wie oft gewonnen?
-  
-Spielende:
-- Textausgabe: Wer hat gewonnen?
-- Button, um die Spielstatistik aufzurufen
-- Button für neues Spiel (zurück auf die Startseite)
-
--->
-
-<!-- Feedback Seanny1992 16.04.2016 
-- Sehr gut ausgearbeitete und übersichtliche Struktur für die Projektidee, die alles wichtige und nennenswerte beinhaltet.
-- Wie sieht es mit einer Schaltfäche (Button) aus, zum vorzeitigen Beenden der Runde?
--->
-
-<!-- Feedback soenkelange 18.04.2016
-
-- übersichtliche und detailierte Struktur
-- Man könnte noch eine Textausgabe für bereits übersprungene und aus dem Spiel genommenen Steine einbauen
-- Ich halte die Bilddateien für weiße Felder mit Spielsteinen überflüssig, da nur auf den schwarzen Spielfeldern
-gespielt wird.
-- stattdessen sollten Bilddateien aufgenommen werden, die Damen repräsentieren
-
--->
-
-<!-- Feedback SusannaAlbrecht
-Dies sind nur Ideen:
-- Hintergrundmusik ist nicht Jedermanns Sache, aber vielleicht wäre eine "Klack"-Sounddatei beim Bewegen eines Steins noch ganz nett
-- eventuell Opener mit Aufmacherbild und "Dame"-Schriftzug, weiter mit Klick
-- da das Spielbrett recht einfach ist, eventuell optional andere Darstellung durch verschiedene Bilddateien (z.B. andere Farben, größere
-  Felder, anderer Stil)
--->
-
-<!--
-=== Feedback Alpers, 2016-04-22 ===
-
-- Auch wenn Sie erst später wieder hier weitermachen sollen, schon einmal einige Anmerkungen:
-
-- Sie sind teilweise zu konkret. 
-Bsp.: "Checkbox zum Einschalten eines NPCs"
-Was hier wichtig ist, ist dass Spieler eine Eingabemöglichkeit haben, um einen NSC zu aktivieren/deaktivieren. Ob das dann als Checkbox dargestellt wird, ist im Moment noch irrelevant.
-Besser: "Eingabemöglichkeit: Spiel mit/ohne NPC"
-So haben Sie insbesondere die Möglichkeit später zu entscheiden, wie viele NSCs spielen sollen.
-
-- Trennen Sie bitte strukturelle Elemente und Inhalte klar von einenander, damit leicht erkennbar ist, welche strukturellen Elemente es geben soll (was ja die Basis für die HTML-Dokumente ist) und welche Inhalte im Detail angezeigt werden sollen. Das könnten Sie z.B. durch Überschriften wie === Strukturelle Elemente === und === Inhalte === verdeutlichen.
-
-- Vor allem aber sollten Sie an diesem Punkt noch nicht die Elemente gruppieren. Bei der nächsten Aufgabe werden Sie sehen, dass es sehr sinnvoll ist, wenn Sie sich zunächst überlegen, was Sie alles an strukturellen Elementen haben wollen, bevor Sie sich über die Gruppierung bzw. die Zusammenstellung zu Ansichten Gedanken machen.
-
-=== Feedback Alpers, Ende ===
--->
+========================================================
 <!-- Ausgearbeitet von SunnySunny93, 28.08.16
+========================================================
 Strukturelle Elemente: (nach Projektidee-Änderung)
 
 -----------------------
@@ -155,3 +80,123 @@ III Neues Spiel
 -01- Schaltfläche/ Neues Spiel starten
 
 -->
+
+<!-- Ausgearbeitet von SunnySunny93, 14.04.16
+Strukturelle Elemente:
+
+Startseite:
+- Textfelder zum Eingeben der Spielernamen
+- Eingabemöglichkeit zum Erstellen eines oder mehrerer NPCs
+  - Eingabemöglichkeit zum Einstellen des Schwierigkeitsgrades des NPCs
+- Schaltfäche zum Öffnen der Spielregeln
+  - Spielregeln durch Absätze trennen
+- Schaltfäche zum Starten des Spiels
+
+
+Spielfeld:
+- Tabelle (8x8) als Spielfeld
+ -> klickbare Bilddateien für die einzelnen Felder
+    - Weiße und Schwarze leere Felder
+	- Weiße und Schwarze Felder mit Spielsteinen
+- Textausgabe: Zugfeedback "Spieler{} zog von {} nach {}..."
+- Pause-Schaltfäche zum Anhalten der Zeit
+- Optionen-Schaltfäche
+- Schaltfäche für Spielzug rückgängig machen.
+
+Spielstatistik:
+- Textausgabe:
+  - Wer ist am Zug?
+  - Wie viele Züge sind gespielt?
+  - Wie lange dauert ein Zug?
+  - Wie lange dauert die Spielrunge (Partie)?
+  - Wer hat bisher wie oft gewonnen?
+  
+Spielende:
+- Textausgabe: Wer hat gewonnen?
+- Button, um die Spielstatistik aufzurufen
+- Button für neues Spiel (zurück auf die Startseite)
+
+-->
+
+<!-- Feedback Seanny1992 16.04.2016 
+- Sehr gut ausgearbeitete und übersichtliche Struktur für die Projektidee, die alles wichtige und nennenswerte beinhaltet.
+- Wie sieht es mit einer Schaltfäche (Button) aus, zum vorzeitigen Beenden der Runde?
+-->
+
+<!-- Feedback soenkelange 18.04.2016
+
+- übersichtliche und detailierte Struktur
+- Man könnte noch eine Textausgabe für bereits übersprungene und aus dem Spiel genommenen Steine einbauen
+- Ich halte die Bilddateien für weiße Felder mit Spielsteinen überflüssig, da nur auf den schwarzen Spielfeldern
+gespielt wird.
+- stattdessen sollten Bilddateien aufgenommen werden, die Damen repräsentieren
+
+-->
+
+<!-- Feedback SusannaAlbrecht
+Dies sind nur Ideen:
+- Hintergrundmusik ist nicht Jedermanns Sache, aber vielleicht wäre eine "Klack"-Sounddatei beim Bewegen eines Steins noch ganz nett
+- eventuell Opener mit Aufmacherbild und "Dame"-Schriftzug, weiter mit Klick
+- da das Spielbrett recht einfach ist, eventuell optional andere Darstellung durch verschiedene Bilddateien (z.B. andere Farben, größere
+  Felder, anderer Stil)
+-->
+
+<!--
+=== Feedback Alpers, 2016-04-22 ===
+
+- Auch wenn Sie erst später wieder hier weitermachen sollen, schon einmal einige Anmerkungen:
+
+- Sie sind teilweise zu konkret. 
+Bsp.: "Checkbox zum Einschalten eines NPCs"
+Was hier wichtig ist, ist dass Spieler eine Eingabemöglichkeit haben, um einen NSC zu aktivieren/deaktivieren. Ob das dann als Checkbox dargestellt wird, ist im Moment noch irrelevant.
+Besser: "Eingabemöglichkeit: Spiel mit/ohne NPC"
+So haben Sie insbesondere die Möglichkeit später zu entscheiden, wie viele NSCs spielen sollen.
+
+- Trennen Sie bitte strukturelle Elemente und Inhalte klar von einenander, damit leicht erkennbar ist, welche strukturellen Elemente es geben soll (was ja die Basis für die HTML-Dokumente ist) und welche Inhalte im Detail angezeigt werden sollen. Das könnten Sie z.B. durch Überschriften wie === Strukturelle Elemente === und === Inhalte === verdeutlichen.
+
+- Vor allem aber sollten Sie an diesem Punkt noch nicht die Elemente gruppieren. Bei der nächsten Aufgabe werden Sie sehen, dass es sehr sinnvoll ist, wenn Sie sich zunächst überlegen, was Sie alles an strukturellen Elementen haben wollen, bevor Sie sich über die Gruppierung bzw. die Zusammenstellung zu Ansichten Gedanken machen.
+
+=== Feedback Alpers, Ende ===
+-->
+
+===================================
+=== Feedback Alpers, 2016-09-27 ===
+===================================
+
+=== Feedback zur strukt.html ===
+
+Leider haben Sie die Aufgabe in der falschen (umgekehrten) Reihenfolge bearbeitet:
+
+Wie die meisten Einsteiger haben Sie mit den Ansichten begonnen, darunter die Gruppen aufgeführt und für jede Gruppe die enthaltenen strukturellen Elemente.
+
+Tatsächlich sollten Sie mit der Aufstellung der strukturellen Elemente beginnen, die für die Anwendung nötig sind. Danach sollten Sie zunächst prüfen, wo es Doubletten gibt und diese eliminieren.
+
+Der nächste Schritt wäre das Ausarbeiten der Gruppen. Eine Gruppe umfasst mehrere Elemente, die gemeinsam eine Aufgabe lösen, eine Funktionalität anbieten o.ä. Ein Beispiel dafür wäre ein Log-In-Formular. Ein anderes Beispiel wäre ein Spielfeld, wobei Spielfelder teilweise aus mehreren Gruppen bestehen.
+
+Bei der Ausarbeitung der Gruppen werden Sie feststellen, dass Ihnen strukturelle Elemente fehlen, die müssten Sie dann bei der Liste der strukturellen Elemente nachtragen. Genauso wird es Gruppen geben, die teilweise Gemeinsamkeiten haben. Wenn das möglich ist, sollten Sie diese Gemeinsamkeiten in einer Gruppe zusammenfassen und dann die Zusammenfassung in den anderen Gruppen includen.
+
+Erst danach entwickeln Sie die Ansichten: Hier nehmen sie Gruppen, bei denen es Sinn macht, sie gemeinsam anzuzeigen. Angenommen Sie haben eine Gruppe entwickelt, die die eingeloggten Spieler anzeigt, dann wird es wahrscheinlich mehrere Ansichten geben, in denen Sie diese Ansicht aufnehmen können.
+
+Sinn und Zweck dieser Aufgabe ist es, dass Sie sich bei späteren Überarbeitungen Arbeit sparen und Fehlermöglichkeiten reduzieren.
+
+Deshalb ist zurzeit leider keine Wertung möglich.
+
+=== Feedback zur Umsetzung ===
+
+Unabhängig vom Feedback zur strukt.html haben Sie leider auch hier die Aufgabe nicht/nicht vollständig umgesetzt: 
+
+Oben haben Sie beispielsweise für die Ansicht index folgende Gruppen definiert:
+
+I Login:
+II Gastzugang:
+V Account erstellen
+
+Dementsprechend müsste es im Verzeichnis Gruppen_de die drei Dateien login.php, gastzugang.php und account_erstellen.php geben. (Alternativ mit großem Anfangsbuchstaben oder ggf. der Endung .html) Die gibt es dort aber nicht.
+
+Damit haben Sie leider den html-Teil auch nicht in der vorgegebenen Form umgesetzt.
+
+=== Gesamtfeedback ===
+
+Ihre Arbeit ist kein Fehlversuch, denn Sie haben ja lediglich die Aufgabenstellung missverstanden. Arbeiten Sie bitte entsprechend der Hinweise die strukt.html um und passen Sie dann den HTML-Code an, indem Sie die entsprechenden Dateien erstellen und ihn dort einfügen.
+
+Es ist keine Frage: Das ist ein recht hoher Aufwand, aber am Anfang eines Projekts ist es essentiell, eine klare Planung zu erstellen und diese systematisch und konsistent umzusetzen. Sonst ist eine Zusammenarbeit im Team nicht möglich und Fehler werden weitgehend übersehen bzw. sind kaum zu lösen.
