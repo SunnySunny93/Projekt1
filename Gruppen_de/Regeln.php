@@ -1,3 +1,4 @@
+<!-- Spielregeln -->
 <h1>Regelwerk:</h1>
 <p>
 	<h2>Spielvorbereitung</h2>
