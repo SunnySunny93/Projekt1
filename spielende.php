@@ -13,6 +13,6 @@
 		Das waren deine Mitspieler:
 		<?php include("/Gruppen_de/Mitspieler.php"); ?>
 		
-		<input type="button" value="Neues Spiel">
+		<?php include("/Gruppen_de/NeuesSpiel.html"); ?>
 	</body>
 </html>
