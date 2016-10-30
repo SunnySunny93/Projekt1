@@ -13,10 +13,10 @@
 			<?php include("/Gruppen_de/Login.html"); ?>
 			
 			<h2> Noch keinen Account? </h2> <!-- V Account erstellen -->
-			<?php include("/Gruppen_de/AccountE.php"); ?>
+			<?php include("/Gruppen_de/AccountE.html"); ?>
 			
 			<h2> Als Gast spielen </h2> <!-- II Gastzugang erstellen -->
-			<?php include("/Gruppen_de/Gastzugang.php"); ?>
+			<?php include("/Gruppen_de/Gastzugang.html"); ?>
 		</main>
 	</body>
 
