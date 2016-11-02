@@ -1,4 +1,52 @@
-﻿============================================
+﻿===========================================
+=== Regelwerk Überarbeitung, 2016-11-02 ===
+===========================================
+*Diese überarbeiteten Spielregeln sind auf Grund eines Selbstversuchs mit 3 Spielern entstanden. (Siehe Ordner Balancing)*
+
+Spielvorbereitung
+- Das Spielfeld besteht aus 6eckigen Feldern(169) mit einer Kantenlänge von 8 Feldern.
+- Jeder Spieler fängt an einer Kannte des 6-Ecks an zu spielen.
+- Jeder Spieler erhält eine andere Farbe an Spielstein, zur besseren Orientierung.
+- Insgesamt hat jeder Spieler 6 Spielsteine auf seiner Seite, welche in 1 Reihe aufgestellt werden (Die Eckpunkte bleiben frei und dürfen auch nicht bespielt werden).
+
+Ziehen eines Steins
+- Jeder Stein darf pro Zug ein Feld vorwärts gezogen werden.
+- Zusätzlich dürfen die Damen auch rückwärts ziehen.
+- Mauerflächen dürfen nicht betreten oder übersprungen werden.
+- Wenn ein Spieler durch Mauern keinen Zug machen kann darf er trotzdem seine Karte ausspielen.
+- In gegnerische Häuser (Anfangspositionen der Spielsteine) darf nicht gezogen werden, außer es ist das gegenüberliegende Haus.
+
+Mauerkarten
+- Jeder Spieler zieht am Anfang seines Zuges eine Karte.
+- Es gibt 3 Arten von Karten: Neue Mauer platzieren, Mauer verschieben, Mauer entfernen
+-- Es muss eine ausgewogene Mischung zwischen Plazierungen und Verschiebungen/Entfernungen geben, um das Spielfeld noch spielbar zu machen.
+-- Mauern können 1 bis 4 Felder groß sein.
+-- Die Form der Mauer ist zufällig.
+-- Die Anzahl der Mauersteine ist begrenzt.
+-- Mauern dürfen direkt vor einen gegnerischen Spielstein gesetzt werden.
+- Die Karte muss am Ende des Zuges ausgespielt werden.
+
+Schlagen
+- Wenn der Spieler mit seinem eingenen Stein direkt über einen gegnerischen Stein
+  auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
+- Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
+- Das erste Schlagen eines Steins muss durchgeführt werden, 
+  jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
+  
+In Dame umwandeln
+- Hat ein Spielstein die gegnerische direkt gegenüberliegende Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
+- Damen dürfen vorwärts, rückwärts und seitwärts ziehen und schlagen.
+- Damen dürfen keine Mauern überspringen.
+
+Spielende
+- Ein Spieler scheidet aus, wenn er keine Spielsteine mehr hat.
+- Wenn ein Spieler aufgibt.
+- Gewonnen hat der Spieler, der zuletzt noch Spielsteine hat.
+
+Unentschieden
+- Nicht vorgesehen bei diesem Spiel.
+
+============================================
 === Projektidee SunnySunny93, 2016-08-24 ===
 ============================================
 
