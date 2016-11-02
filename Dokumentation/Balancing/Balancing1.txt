@@ -1,0 +1,21 @@
+Spielaufbau
+
+3 Spieler nahmen am Versuch teil.
+Gespielt wurde mit einem Papier-Spielfeld und Smaties als Spielfiguren.
+Mauerkarten: 7 Entfernen-, 9 Verschieben- und 8 Setztenkaten.
+Mauern wurden je nach gezogener Karte "generiert", so entstanden immer mehr.
+
+
+Fazit des ersten Balancing
+
+Das Spielprinzip ist einfach und schnell zu verstehen. Die Interaktionen der Spieler sind vielfälltig und spannend.
+Die Spielzeit ist zu lange. Nach 2 Stunden waren bislang nur 2 Damen entstanden und je 4 Spielsteine entfernt. 
+Das Spielfeld war fast vollständig mit Mauersteinen besetzt und so wurden Spielzüge und Konfrontationen erschwert.
+Viele Steine standen weiterhin an ihren Startpositionen und wurden nicht bewegt.
+
+Daraus ergebende Änderungen:
+> Das Spielfeld würde um den äußeren Kranz verkleinert.
+> Die Anzahl der Spielsteine wurde auf 6 reduziert.
+> Die Mauersteine erhalten eine Anzahlbegrenzung.
+> Die Mauerkarten wurden in eine ca 1:1 Balance gebraucht zwischen Setzen und Entfernen/Verschieben. 
+  So wird verhindert, dass zu viele Mauern gesetzt werden.
