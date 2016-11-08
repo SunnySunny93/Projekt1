@@ -6,14 +6,18 @@
 	</head>
 	<body>
 		<!-- III Spielinformationen -->
-		<?php include("/Gruppen_de/Spielinformation.php"); ?>
-		<!-- I Spielfeld -->
-		<center>
-			<?php include("/Gruppen_de/Spielbrett.php"); ?>
-		</center>
+		<?php include("/Gruppen_de/Spielinformation.php");?>
+		<!-- I Spielfeld --><!--Karten -->
+		<table>
+		<tr>
+			<td><?php include("/Gruppen_de/Karten.php"); ?></td>
+			<td><?php include("/Gruppen_de/Spielfeld.php"); ?></td>
+		</tr>
 		
-		<!--Karten -->
-		<?php include("/Gruppen_de/Karten.php"); ?>
+		
+		
+			
+		
 		Optionen
 		<?php include("/Gruppen_de/Optionen.php"); ?>
 	</body>
