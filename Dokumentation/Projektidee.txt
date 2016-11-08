@@ -4,7 +4,7 @@
 *Diese überarbeiteten Spielregeln sind auf Grund eines Selbstversuchs mit 3 Spielern entstanden. (Siehe Ordner Balancing)*
 
 Spielvorbereitung
-- Das Spielfeld besteht aus 6eckigen Feldern(169) mit einer Kantenlänge von 8 Feldern.
+- Das Spielfeld besteht aus 6eckigen Feldern(170) mit einer Kantenlänge von 8 Feldern.
 - Jeder Spieler fängt an einer Kannte des 6-Ecks an zu spielen.
 - Jeder Spieler erhält eine andere Farbe an Spielstein, zur besseren Orientierung.
 - Insgesamt hat jeder Spieler 6 Spielsteine auf seiner Seite, welche in 1 Reihe aufgestellt werden (Die Eckpunkte bleiben frei und dürfen auch nicht bespielt werden).
