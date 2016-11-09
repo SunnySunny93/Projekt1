@@ -6,15 +6,13 @@
 	</head>
 	<body>
 		<main>
-			<?php include("/Gruppen_de/spielstein.php"); ?>
 			<h1> Noch ein paar Einstellungen und dann kann es losgehen! </h1>
 			<!-- V Spielregeln -->
 			<h2> Die Spielregeln </h2>
-			<?php include("/Gruppen_de/Regeln.php"); ?>
-			
+			<form action= "Gruppen_de/Regeln.html">
+				<input type="submit" value="Zu den Regeln">
+			</form>
 			<h2> Wie soll dein Spielstein aussehen? </h2>
-			
-			</h2>
 			<?php include("/Gruppen_de/spielstein.html"); ?>
 			
 			
