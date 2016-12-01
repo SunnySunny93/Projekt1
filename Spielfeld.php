@@ -6,12 +6,12 @@
 	</head>
 	<body>
 		<!-- III Spielinformationen -->
-		<?php include("/Gruppen_de/Spielinformation.php");?>
+		<?php include("Gruppen_de/Spielinformation.php");?>
 		<!-- I Spielfeld --><!--Karten -->
 		<table>
 		<tr>
-			<td><?php include("/Gruppen_de/Karten.php"); ?></td>
-			<td><?php include("/Gruppen_de/Spielfeld.php"); ?></td>
+			<td><?php include("Gruppen_de/Karten.php"); ?></td>
+			<td><?php include("Gruppen_de/Spielfeld.php"); ?></td>
 		</tr>
 		
 		
@@ -19,6 +19,6 @@
 			
 		
 		Optionen
-		<?php include("/Gruppen_de/Optionen.php"); ?>
+		<?php include("Gruppen_de/Optionen.php"); ?>
 	</body>
 </html>

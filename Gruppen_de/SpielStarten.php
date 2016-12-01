@@ -13,6 +13,6 @@
 </table>
 </form>
 <!-- Hier erscheinen die Mitspieler -->
-<?php include("/Gruppen_de/Mitspieler.php"); ?>
+<?php include("Mitspieler.php"); ?>
 
 <input type="submit" value="Spiel starten">

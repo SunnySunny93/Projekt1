@@ -1,4 +1,4 @@
-<? php
+<?php
 	$feldbelegung= array(
 		1 => "Sperrfeld",
 		2 => "Haus1",
@@ -30,14 +30,14 @@
 		153 => "Haus5",
 		162 => "Sperrfeld",
 		163 => "Haus4",
-		164 => "Haus4", 
-		165 => "Haus4", 
+		164 => "Haus4",
+		165 => "Haus4",
 		166 => "Haus4",
 		167 => "Haus4",
 		168 => "Haus4",
 		169 => "Sperrfeld",
 		106 => "Haus3",
-		119 => "Haus3", 
+		119 => "Haus3",
 		131 => "Haus3",
 		142 => "Haus3",
 		152 => "Haus3",

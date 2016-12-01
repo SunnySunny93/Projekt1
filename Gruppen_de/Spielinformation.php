@@ -38,7 +38,7 @@
 		}
 	}
 	
-	print "<header>";
-		print "<h2><label for='feedback'>$zugausgabe</label> - <label for='ablauf'>$ablauftext</label><h2>";
-	print "</header>";
+	echo "<header>";
+		echo "<h2><label for='feedback'>$zugausgabe</label> - <label for='ablauf'>$ablauftext</label><h2>";
+	echo "</header>";
 ?>
