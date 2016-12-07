@@ -1,4 +1,13 @@
 <!Doctype html>
+<?php
+	include("functions.php");
+	$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+	$nickname = filter_var($_POST['nickname'], FILTER_SANITIZE_STRING);
+	$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+	$password = md5($password);
+
+	print_r(db_query('INSERT into `User` (`email`, `nickname`, `password`) VALUES ("'.$email.'", "'.$nickname.'", "'.$password.'");'));
+?>
 <html lang=de>
 	<head>
 		<Meta charset=utf-8 />
@@ -13,11 +22,11 @@
 				<input type="submit" value="Zu den Regeln">
 			</form>
 			<h2> Wie soll dein Spielstein aussehen? </h2>
-			<?php include("Gruppen_de/spielstein.html"); ?>
-			
-			
+			<?php include("Gruppen_de/Spielstein.html"); ?>
+
+
 			<!-- IV Spiel starten -->
-			
+
 			<h2>Spiele ein Spiel gegen zufällige andere Spieler</h2>
 			<?php include("Gruppen_de/SpielStarten.php"); ?>
 		</main>

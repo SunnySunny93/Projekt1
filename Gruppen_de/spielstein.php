@@ -1,19 +1,26 @@
 <?php
-	if (! empty($_POST['spielstein'] or $_POST['farbe'])){
+	if (! empty($_GET['spielstein'] or $_GET['farbe'])){
 		header("Content-type: image/png");
-		$form = $_POST['spielstein'];
-		$farbe = $_POST['farbe'];
-		
+		$form = $_GET['spielstein'];
+		$farbe = $_GET['farbe'];
+
 		$image = imagecreate(200, 200);
-		$grau = imagecolorallocate( $image, 155,155,155);
+    $hex = ltrim($farbe,'#');
+    $r = hexdec(substr($hex,0,2));
+    $g = hexdec(substr($hex,2,2));
+    $b = hexdec(substr($hex,4,2));
+		imagecolorallocatealpha( $image, 155, 155, 155, 127);
+    $farbe = imagecolorallocate($image, $r, $g, $b);
+
 		if($form == 'kreis'){
-			imagefilledarc( $image, 100, 100, 50, 50, 0, 360, $farbe);
+			imagefilledarc( $image, 100, 100, 150, 150, 0, 360, $farbe, IMG_ARC_PIE);
 		} else if($form == 'quadrat') {
-			imagefilledrectangle( $image, 50, 50, 150, 150, $farbe);
+			imagefilledrectangle( $image, 25, 25, 175, 175, $farbe);
 		} else if($form =='dreieck') {
-			$points= array( 50, 100, 150, 25, 150, 75);
+			$points= array( 25, 175, 175, 175, 100, 25);
 			imagefilledpolygon( $image, $points, 3, $farbe);
 		}
+		//imagefilledrectangle( $image, 50, 50, 150, 150, $farbe);
 		imagepng($image);
 	}
 ?>

@@ -3,11 +3,16 @@
 <head>
 	<Meta charset=utf-8 />
 	<title>Spielfeld</title>
+	<style>
+		#spielfeld td.feld {
+			cursor: pointer;
+		}
+	</style>
 </head>
 
 <body>
 	<main>
-		<table border=0 width='849px' height='746' background='Bilder/Spielfeld.png' background-size=auto>
+		<table id="spielfeld" border=0 width='849px' height='746' background='Bilder/Spielfeld.png' background-size=auto>
 			<colgroup span='32' width=auto></colgroup>
 			<tr align='center' valign='center'>
 				<td colspan=34></td>
@@ -18,12 +23,14 @@
 				$cols = 8;
 				$span = 7;
 				$operator = 1;
+				$internal_id = 0;
 				for($row = 1;$row <= $rows;$row++) {
 					echo "<tr align='center' valign='center'>";
 					echo $span != 0 ? "<td colspan=$span></td>" : "";
 					for($col = 1;$col <= $cols;$col++) {
+						$internal_id++;
 						$id = $row . sprintf('%02d', $col);
-						echo "<td colspan=2 id=$id>$id</td>";
+						echo "<td class=feld colspan=2 id=$internal_id>$id</td>";
 					}
 					echo $span != 0 ? "<td colspan=$span></td>" : "";
 					echo "</tr>";
@@ -32,6 +39,7 @@
 					}
 					$cols += $operator;
 					$span -= $operator;
+
 				}
 			?>
 

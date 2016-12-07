@@ -41,5 +41,7 @@
 		131 => "Haus3",
 		142 => "Haus3",
 		152 => "Haus3",
-		161 => "Haus3")
+		161 => "Haus3");
+
+		echo json_encode($feldbelegung);
 ?>

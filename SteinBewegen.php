@@ -3,20 +3,14 @@
 	function ziehen($ausgangspunkt, $endpunkt)
 	{
 		if(($ausgangspunkt < 800) && ($endpunkt <= 800)){
-			if(($endpunkt - 100 == $ausgangspunkt) || ($endpunkt - 101 == $ausgangspunkt)){
-				return true;
-			} else {
-				return false;
-			}
+			return (($endpunkt - 100 == $ausgangspunkt) || ($endpunkt - 101 == $ausgangspunkt));
 		} elseif(($ausgangspunkt >= 800) && ($endpunkt > 800)) {
-			if(($endpunkt - 100 == $ausgangspunkt) || ($endpunkt - 99 == $ausgangspunkt)){
-				return true;
-			} else {
-				return false;
-			}
+			return (($endpunkt - 100 == $ausgangspunkt) || ($endpunkt - 99 == $ausgangspunkt));
 		}
 	}
 	//Funktion zur Prüfung auf ein Nachbarfeld (Damen können in alle Richtungen ziehen)
+	//ToDo: Compress
+	//ToDo: Ziehen der dame anpassen
 	function ziehenD($ausgangspunkt, $endpunkt)
 	{
 		if(($ausgangspunkt < 800) && ($endpunkt <= 800)){
@@ -41,7 +35,7 @@
 			}
 		}
 	}
-
+	//ToDo: Finish
 	function schlagen($ausgangspunkt, $endpunkt)
 	{
 		if(($endpunkt - 200 == $ausgangspunkt) || ($endpunkt - 202 == $ausgangspunkt)) {
