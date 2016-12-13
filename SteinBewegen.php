@@ -36,7 +36,28 @@
 		}
 	}
 	//ToDo: Finish
+	//schlagen: mit Überprüfung, ob ein Stein geschlagen werden kann
 	function schlagen($ausgangspunkt, $endpunkt)
 	{
 		if(($endpunkt - 200 == $ausgangspunkt) || ($endpunkt - 202 == $ausgangspunkt)) {
+	}
+
+	// function is_neighbor($feld1, $feld2)
+	// {
+	//
+	// }
+
+	function is_blocked($feld)
+	{
+		//Überprüfung ob ein Spielstein oder eine Mauer auf dem feld steht.
+	}
+
+	function feldbelegung ($feld)
+	{
+		//return Spielstein/ Mauer
+	}
+
+	function get_anzahl_mauerstuecke()
+	{
+		//übergeben wird die Bezeichnung der PNG um daraus die Anzahl der Mauerstücke zu ermitteln
 	}
