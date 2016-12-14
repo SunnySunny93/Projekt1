@@ -1,0 +1,21 @@
+Partie
+	Spielfeld
+		Kartenstapel
+			Methode: Nächste Karte
+			Karte
+				id
+				Bild
+				Funktion
+		Felder
+			Feld
+				Methode: zieheVon($start, Spielstein)
+				Id
+				Belegung
+					Mauer
+					Spielstein
+						ID
+						Spieler
+						IstDame
+	Spieler
+		Icon
+		Name

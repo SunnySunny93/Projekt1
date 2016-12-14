@@ -23,7 +23,7 @@
 			} else {
 				return false;
 			}
-		} elseif($ausgangspunkt >=800) && ($endpunkt >800) {
+		} elseif(($ausgangspunkt >=800) && ($endpunkt >800)) {
 			if(($endpunkt + 1 == $ausgangspunkt) || ($endpunkt - 1 == $ausgangspunkt)) {
 				return true;
 			} elseif(($endpunkt + 100 == $ausgangspunkt) || ($endpunkt + 99 == $ausgangspunkt)) {
@@ -40,6 +40,8 @@
 	function schlagen($ausgangspunkt, $endpunkt)
 	{
 		if(($endpunkt - 200 == $ausgangspunkt) || ($endpunkt - 202 == $ausgangspunkt)) {
+
+        }
 	}
 
 	// function is_neighbor($feld1, $feld2)

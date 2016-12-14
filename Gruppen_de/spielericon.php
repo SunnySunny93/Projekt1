@@ -25,4 +25,4 @@
 	}
 ?>
 
-<img src="spielstein.php" alt= "Ein Bild">
+<img src="spielericon.php" alt= "Ein Bild">

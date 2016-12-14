@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<main>
-			<h1> Willkommen bei Dame 2.0 <h1>
+			<h1> Willkommen bei Dame 2.0 </h1>
 			<h2> Login </h2> <!-- I Login -->
 			<!-- Hier wird der Benutzername und das Passwort eingegeben
 				 In Form einer Tabelle als bessere Übersicht -->
