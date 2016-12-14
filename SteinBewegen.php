@@ -49,14 +49,14 @@
 
 	function is_blocked($feld)
 	{
-		//Überprüfung ob ein Spielstein oder eine Mauer auf dem feld steht.
+		//Überprüfung ob ein Spielstein oder eine Mauer auf dem Feld steht.
 	}
 
 	function feldbelegung ($feld)
 	{
 		//return Spielstein/ Mauer
 	}
-
+	//ToDo: Funktion testen.
 	function get_anzahl_mauerstuecke($bild)
 	{
 		//übergeben wird die Bezeichnung der PNG um daraus die Anzahl der Mauerstücke zu ermitteln
