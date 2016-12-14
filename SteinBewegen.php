@@ -57,7 +57,25 @@
 		//return Spielstein/ Mauer
 	}
 
-	function get_anzahl_mauerstuecke()
+	function get_anzahl_mauerstuecke($bild)
 	{
 		//übergeben wird die Bezeichnung der PNG um daraus die Anzahl der Mauerstücke zu ermitteln
+		$str = substr($bild, 0, -10); //Damit bleibt nur Eins, Zwei, Drei oder Vier über, die weiter verabeitet werden können.
+		switch ($str) {
+			case 'Eins':
+				return 1;
+				break;
+			case 'Zwei':
+				return 2;
+				break;
+			case 'Drei':
+				return 3;
+				break;
+			case 'Vier':
+				return 4;
+				break;
+			default:
+				//ErrorException();
+				break;
+		}
 	}
