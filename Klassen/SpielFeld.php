@@ -8,7 +8,7 @@ class SpielFeld
     private $kartenstapel;
 
     /**
-     * @var array
+     * @var Feld[]
      */
     private $felder;
 
@@ -60,5 +60,14 @@ class SpielFeld
      */
     public function spielerZieht($start, $ziel){
         //ToDo: JanR
+        $startbelegung = $this->felder[$start]->getBelegung();
+        $zielbelegung = $this->felder[$ziel]->getBelegung();
+
+        if($startbelegung instanceof SpielStein){
+
+        }
+
+
+
     }
 }

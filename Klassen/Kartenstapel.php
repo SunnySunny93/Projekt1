@@ -35,22 +35,22 @@ class Kartenstapel
         $j == 0;
         for ($i=0; $i < $anzahlSetzenKarten; $i++) {
           $zufallszahl = rand(0,4);
-          $bild = $setzenKarten[$zufallszahl];
-          $funktion = "Setzen";
+          $bild = "Bilder/".$setzenKarten[$zufallszahl]."png";
+          $funktion = $setzenKarten[$zufallszahl];
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
         for ($i=0; $i < $anzahlVerschiebenKarten; $i++) {
           $zufallszahl = rand(0,4);
-          $bild = $verschiebenKarten[$zufallszahl];
-          $funktion = "Verschieben";
+          $bild = "Bilder/".$verschiebenKarten[$zufallszahl]."png";
+          $funktion = $verschiebenKarten[$zufallszahl];
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
         for ($i=0; $i < $anzahlEntfernenKarten; $i++) {
           $zufallszahl = rand(0,4);
-          $bild = $entfernenKarten[$zufallszahl];
-          $funktion = "Entfernen";
+          $bild = "Bilder/".$entfernenKarten[$zufallszahl]."png";
+          $funktion = $entfernenKarten[$zufallszahl];
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
