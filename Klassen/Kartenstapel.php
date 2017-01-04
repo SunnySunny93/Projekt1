@@ -10,6 +10,7 @@ class Kartenstapel
     /**
      * @var int
      */
+    // Limit darf nur Teiler von 25 sein
     private $limit = 50;
 
     /**
@@ -22,13 +23,44 @@ class Kartenstapel
      */
     public function __construct()
     {
-        for($i = 0;$i <= $this->limit;$i++){
-            //ToDO: Kartenverteilung einbauen
-            $bild = "";
-            $funktion = "";
-
-            //ToDO: Bereits gezogene karten berücksichtigen
-            $this->karten[] = new Karte($i, $bild, $funktion);
+        //setzen: 7/25 des Stapels sind Setzen-Karten
+        $setzenKarten = array("EinsSetzen", "ZweiSetzen", "DreiSetzen", "VierSetzen");
+        //verschieben: 9/25 des Stapels sind Verschieben-Karten
+        $verschiebenKarten = array("EinsVerschieben", "ZweiVerschieben", "DreiVerschieben", "VierVerschieben");
+        //entfernen: 9/25 des Stapels sind Entfernen-Karten
+        $entfernenKarten = array("EinsEntfernen", "ZweiEntfernen", "DreiEntfernen", "VierEntfernen");
+        $anzahlSetzenKarten = 7/25*$this->limit;
+        $anzahlVerschiebenKarten = 9/25*$this->limit;
+        $anzahlEntfernenKarten = 9/25*$this->limit;
+        $j == 0;
+        for ($i=0; $i < $anzahlSetzenKarten; $i++) {
+          $zufallszahl = rand(0,4);
+          $bild = $setzenKarten[$zufallszahl];
+          $funktion = "Setzen";
+          $j++;
+          $this->karten[] = new Karte($j, $bild, $funktion);
+        }
+        for ($i=0; $i < $anzahlVerschiebenKarten; $i++) {
+          $zufallszahl = rand(0,4);
+          $bild = $verschiebenKarten[$zufallszahl];
+          $funktion = "Verschieben";
+          $j++;
+          $this->karten[] = new Karte($j, $bild, $funktion);
+        }
+        for ($i=0; $i < $anzahlEntfernenKarten; $i++) {
+          $zufallszahl = rand(0,4);
+          $bild = $entfernenKarten[$zufallszahl];
+          $funktion = "Entfernen";
+          $j++;
+          $this->karten[] = new Karte($j, $bild, $funktion);
+        }
+        // for($i = 0;$i <= $this->limit;$i++){
+        //     //ToDO: Kartenverteilung einbauen
+        //     $bild = "";
+        //     $funktion = "";
+        //
+        //     //ToDO: Bereits gezogene karten berücksichtigen
+        //     $this->karten[] = new Karte($i, $bild, $funktion);
         }
     }
 
