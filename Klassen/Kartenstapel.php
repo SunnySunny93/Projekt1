@@ -5,6 +5,10 @@ class Kartenstapel
     /**
      * @var array
      */
+    private $abgelegteKarten;
+    /**
+     * @var array
+     */
     private $karten;
 
     /**
@@ -66,7 +70,15 @@ class Kartenstapel
 
     public function nächsteKarte()
     {
-        $this->offeneKarte = $this->karten[rand(0,5)];
+        //ToDO: Fertig?
+        //ToDO: Anzahl muss "global" gespeichert werden damit sie nach Zugriff subtrahiert werden kann.
+        $anzahlKartenStapel= $this->limit;                                                      //Anzahl Karten die noch im Stapel sind
+        $zufallsZahl=rand(0,$anzahlKartenStapel);                                               //Karte die gezogen wird
+        $this->offeneKarte = $this->karten[$zufallsZahl];                                       //Karte wird ausgegeben
+        $this->abgelegteKarten[$this->limit-$anzahlKartenStapel] = $this->karten[$zufallsZahl]  //Gezogene Karte wird im anderen Array abgespeichert
+        unset($this->karten[$zufallsZahl]);                                                     //Karte wird aus Array entfernt
+        $this->karten = array_values($this->karten);                                            //Array wird wieder zusammen geschoben
+        $anzahlKartenStapel -= 1;                                                               //Anzahl der Karten die im Stapel sind wird um 1 verringert
     }
 
     /**
