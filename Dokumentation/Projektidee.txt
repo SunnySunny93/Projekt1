@@ -37,6 +37,7 @@ In Dame umwandeln
 
 Spielende
 - Ein Spieler scheidet aus, wenn er keine Spielsteine mehr hat.
+- Ein Spieler kann vorzeitig ausscheiden in dem er aufgibt.
 - Gewonnen hat der Spieler, der zuletzt noch Spielsteine hat.
 
 Unentschieden
