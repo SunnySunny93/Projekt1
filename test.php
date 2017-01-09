@@ -7,7 +7,7 @@ require_once "Klassen/Spieler.php";
 require_once "Klassen/SpielFeld.php";
 require_once "Klassen/SpielStein.php";
 session_start();
-session_unset();
+//session_unset();
 
 if (isset($_SESSION['partie']))
 {
