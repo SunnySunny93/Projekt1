@@ -38,14 +38,6 @@ class Partie
         $this->spieler[] = $spieler;
     }
 
-    /**
-     * @return string
-     */
-    function __toString()
-    {
-        return serialize($this);
-    }
-
     public function nextTurn()
     {
         $index = array_search($this->aktuellerSpieler, $this->spieler);
@@ -56,7 +48,13 @@ class Partie
         $this->aktuellerSpieler = $this->spieler[$index];
     }
 
-    public function getHtml(){
+    public function getSpieler()
+    {
+        return $this->spieler;
+    }
+
+    public function getHtml()
+    {
         //ToDo: Spielernamen anzeigen
         $spielerName = $this->aktuellerSpieler->getName();
         $html = "";
@@ -79,5 +77,11 @@ class Partie
         return $html;
     }
 
-
+    /**
+     * @return string
+     */
+    function __toString()
+    {
+        return serialize($this);
+    }
 }
