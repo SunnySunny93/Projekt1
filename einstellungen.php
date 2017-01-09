@@ -21,7 +21,6 @@
 			<form action= "Gruppen_de/Regeln.html">
 				<input type="submit" value="Zu den Regeln">
 			</form>
-			<h2> Wie soll dein Spielstein aussehen? </h2>
 			<?php include("Gruppen_de/Spielstein.html"); ?>
 
 
