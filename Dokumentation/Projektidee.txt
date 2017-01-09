@@ -1,4 +1,48 @@
-﻿===========================================
+===========================================
+=== Regelwerk Überarbeitung, 2017-01-09 ===
+===========================================
+
+Spielvorbereitung
+- Das Spielfeld besteht aus 6-eckigen Feldern(169) mit einer Kantenlänge von 8 Feldern.
+- Jeder Spieler fängt an einer Kannte des 6-Ecks an zu spielen.
+- Jeder Spieler wählt sich einen Spielstein mit Farbe und Form aus.
+- Insgesamt hat jeder Spieler 6 Spielsteine auf seiner Seite, welche in einer Reihe aufgestellt werden (Die Eckpunkte bleiben frei und dürfen auch nicht bespielt werden).
+
+Ziehen eines Steins
+- Jeder Stein darf pro Zug ein Feld vorwärts gezogen werden.
+- Zusätzlich dürfen die Damen auch rückwärts ziehen.
+- Mauerflächen dürfen nicht betreten oder übersprungen werden.
+- Wenn ein Spieler durch Mauern keinen Zug machen kann darf er trotzdem seine Karte ausspielen.
+
+Mauerkarten
+- Jeder Spieler zieht am Anfang seines Zuges eine Karte.
+- Es gibt 3 Arten von Karten: Neue Mauer platzieren, Mauer verschieben, Mauer entfernen
+-- Es muss eine ausgewogene Mischung zwischen Plazierungen und Verschiebungen/Entfernungen geben, um das Spielfeld noch spielbar zu machen.
+-- Mauern können 1 bis 4 Felder groß sein.
+-- Die Mauersteine können frei plat´ziert werden, solange die Felder benachbart sind.
+-- Das Katendeck wird zu jedem neuen Spiel neu generiert und enthält daher immer neue Karten.
+-- Sollten die Karten des Decks nicht ausreichen werden diese neu gemischt und erneut gezogen.
+-- Mauern dürfen direkt vor einen gegnerischen Spielstein gesetzt werden.
+- Die Karte muss am Ende des Zuges ausgespielt werden.
+
+Schlagen
+- Wenn der Spieler mit seinem eigenen Stein direkt über einen gegnerischen Stein
+  auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
+- Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
+
+In Dame umwandeln
+- Hat ein Spielstein die gegnerische direkt gegenüberliegende Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
+- Damen dürfen vorwärts, rückwärts und seitwärts ziehen und schlagen.
+- Damen dürfen keine Mauern überspringen.
+
+Spielende
+- Ein Spieler scheidet aus, wenn er keine Spielsteine mehr hat.
+- Gewonnen hat der Spieler, der zuletzt noch Spielsteine hat.
+
+Unentschieden
+- Nicht vorgesehen bei diesem Spiel.
+
+===========================================
 === Regelwerk Überarbeitung, 2016-11-02 ===
 ===========================================
 *Diese überarbeiteten Spielregeln sind auf Grund eines Selbstversuchs mit 3 Spielern entstanden. (Siehe Ordner Balancing)*
@@ -30,9 +74,9 @@ Schlagen
 - Wenn der Spieler mit seinem eingenen Stein direkt über einen gegnerischen Stein
   auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
 - Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
-- Das erste Schlagen eines Steins muss durchgeführt werden, 
+- Das erste Schlagen eines Steins muss durchgeführt werden,
   jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
-  
+
 In Dame umwandeln
 - Hat ein Spielstein die gegnerische direkt gegenüberliegende Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
 - Damen dürfen vorwärts, rückwärts und seitwärts ziehen und schlagen.
@@ -52,13 +96,13 @@ Unentschieden
 
 Dame (Brettspiel) Clone
 
-Im Projekt soll das Erweiterung des klassischen Dame Brettspiel verwirklicht werden.
+Im Projekt soll die Erweiterung des klassischen Dame Brettspiels verwirklicht werden.
 
 Das Dame Spiel soll von bis zu 6 Usern genutzt werden. Diese können zum Teil von NPCs ersetzt werden.
 
 Dazu müssen die Spielregeln und das Spielfeld des normalen Dame Spiels überarbeitet werden.
 
-Die Spieler können ihren Namen eintragen. 
+Die Spieler können ihren Namen eintragen.
 
 Dann kann ausgegeben werden, wer gerade am Zug ist und später auch wer gewonnen hat.
 
@@ -66,7 +110,7 @@ Zusätzlich dazu können Daten von den beiden Spielern gesammelt und ausgegeben 
 - Züge
 - Spieldauer
 - Siege
-- Zeit pro Zug 
+- Zeit pro Zug
 
 ===========================================
 === Regelwerk Überarbeitung, 2016-08-24 ===
@@ -96,9 +140,9 @@ Schlagen
 - Wenn der Spieler mit seinem eingenen Stein direkt über einen gegnerischen Stein
   auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
 - Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
-- Das erste Schlagen eines Steins muss durchgeführt werden, 
+- Das erste Schlagen eines Steins muss durchgeführt werden,
   jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
-  
+
 In Dame umwandeln
 - Hat ein Spielstein die gegnerische direkt gegenüberliegende Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
 - Damen dürfen vorwärts und rückwärts ziehen und schlagen.
@@ -128,7 +172,7 @@ Unentschieden
 Spielvorbereitung
 - Das Spielfeld besteht aus 64 Feldern (1-8 * a-h)
 - Die Felder sind abwechselnd verschieden farbig. (Schachbrettmuster)
-- Die zwei untereschiedlichen Spielsteine werden in je 3 Reihen an 
+- Die zwei untereschiedlichen Spielsteine werden in je 3 Reihen an
   beiden Enden des Spielfeldes jeweils auf die gleichfarbigen Felder gelegt.
 - Insgesamt hat jeder Spieler 12 Spielsteine auf seiner Seite.
 
@@ -141,9 +185,9 @@ Schlagen
 - Wenn der Spieler mit seinem eingenen Stein diagonal über einen gegnerischen Stein
   auf ein freies Feld springen kann, wird der gegnerische Stein geschlagen und aus dem Spiel genommen.
 - Das Schlagen eines Steins kann mehrmals in einem Zug durchgeführt werden.
-- Das erste Schlagen eines Steins muss durchgeführt werden, 
+- Das erste Schlagen eines Steins muss durchgeführt werden,
   jedoch sind alle weiteren möglichen Schläge freiwillig und nicht zwingend.
-  
+
 In Dame umwandeln
 - Hat ein Spielstein die gegnerische Grundlinie erreicht, wird dieser in eine Dame umgewandelt.
 - Damen dürfen vorwärts und rückwärts ziehen und schlagen.
@@ -182,11 +226,11 @@ SvenMarderer: Projekt1, Betrayal at house on the hill
   - Spielfeld
   - Würfel
   - 3 Kartenstapel
-  
+
 SusannaAlbrecht: GitProjekt, Monopoly
 - strukt.html bearbeitet
   - Spielfeld: Tabelle
-  
+
 HTML-Datei strukt.html erstellt.
 
 ============================================
@@ -201,7 +245,7 @@ Das Dame Spiel soll von zwei Usern genutzt werden. Sollte der Zeitumfang es zula
 
 Dazu müssen die Spielregeln umgesetzt werden und ein Spielfeld muss dargestellt werden.
 
-Die Spieler können ihren Namen eintragen. 
+Die Spieler können ihren Namen eintragen.
 
 Dann kann ausgegeben werden, wer gerade am Zug ist und später auch wer gewonnen hat.
 
@@ -259,8 +303,8 @@ Wertung 2: Projektbeschreibung: gesamt: 7 / 10
 - Pro Interaktionsmöglichkeit: 2
 - Knappe aber klare Beschreibung: 5
 - Werbeslogans u.ä.: 0
-- Designaspekte: 0 
-- Voraussetzung bekannten Wissens: 0 
+- Designaspekte: 0
+- Voraussetzung bekannten Wissens: 0
 
 Schade, dass Sie an der strukt.html noch nicht weiter gearbeitet haben.
 
@@ -274,7 +318,7 @@ Wichtig: Die Einbindung des Computers als aktivem Teil des Programms (siehe Hinw
 ===   Anmerkung 2016-07-12 ===
 ==============================
 
-Auf Grund der Hausarbeit von MINF musste das Projekt A leider ruhen. 
+Auf Grund der Hausarbeit von MINF musste das Projekt A leider ruhen.
 Da jetzt aber auch alle Aufgaben vollständig vorhanden sind, werde ich mich jetzt als nächstes wieder hierran setzen.
 Ich habe noch nicht aufgegeben. ;)
 
