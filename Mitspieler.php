@@ -19,10 +19,12 @@ if (isset($_SESSION['partie']))
 			<th>Nummer</th><th>Spieler</th>
 		</tr>
 		<?php
+      $nummer = 1;
 			foreach ($spielerliste as $spieler) {
 				echo "<tr>";
-				echo "	<td>1</td><td>" . $spieler->getName() . "</td>";
+				echo "	<td>" . $nummer . "</td><td>" . $spieler->getName() . "</td>";
 				echo "</tr>";
+        $nummer+=1;
 			}
 		?>
 	</table>
