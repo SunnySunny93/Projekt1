@@ -35,14 +35,9 @@ class SpielFeld
     public function getSpielfeldHtml()
     {
         $html = "";
-        //ToDO: generiere Spielfeld Tabelle JanR
-        $html .= "<table id=\"spielfeld\" border=0 width='849px' height='746' background='Bilder/Spielfeld.png' background-size=auto>";
-		$html .= "<colgroup span='32' width=auto></colgroup>";
-		$html .= "<tr align='center' valign='center'>";
-        $html .= "<td colspan=34></td>";
-		$html .= "</tr>";
 
-        //spielfeld generieren
+        $html .= "<div style=\"float: left; width: 100%;\">";
+
         $rows = 15;
         $cols = 8;
         $span = 7;
@@ -50,27 +45,31 @@ class SpielFeld
         $internal_id = 0;
 
         for($row = 1;$row <= $rows;$row++) {
-            $html .= "<tr align='center' valign='center'>";
-            $html .= $span != 0 ? "<td colspan=$span></td>" : "";
+            if($cols % 2 == 0){
+                $even = " even";
+            }else{
+                $even = "";
+            }
+            $html .= "<div class=\"hex-row" . $even . "\">";
+            $parity = floor(($rows - $cols) / 2);
+            for($p = 1; $p <= $parity; $p++){
+                $html .= "<div class=\"hex invisible\"><div class=\"top\"></div><div class=\"middle\"></div><div class=\"bottom\"></div></div>";// add invisible hexagons
+            }
             for($col = 1;$col <= $cols;$col++) {
                 $internal_id++;
                 $id = $row . sprintf('%02d', $col);
-                $html .= "<td class=feld colspan=2 id=$internal_id>$id</td>";
+                //$html .= "<td class=feld colspan=2 id=$internal_id>$id</td>";
+                $html .= "<div class=\"hex default\"><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\">" . $id . " </div><div class=\"bottom\"></div></div>";
             }
             $html .= $span != 0 ? "<td colspan=$span></td>" : "";
-            $html .= "</tr>";
+            $html .= "</div>";
             if($cols >= $rows){
                 $operator = -1;
             }
             $cols += $operator;
             $span -= $operator;
-
         }
-
-        $html .= "<tr align='center' valign='center'>";
-        $html .= "<td colspan=34></td>";
-        $html .= "</tr>";
-        $html .= "</table>";
+        $html .= "</div>";
         return $html;
     }
 

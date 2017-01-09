@@ -8,9 +8,14 @@ class Partie
     private $spielfeld;
 
     /**
-     * @var array
+     * @var Spieler[]
      */
     private $spieler;
+
+    /**
+     * @var Spieler
+     */
+    private $aktuellerSpieler;
 
     /**
      * Partie constructor.
@@ -25,6 +30,12 @@ class Partie
         if($spielfeld == NULL) {
             $this->spielfeld = new SpielFeld($spieler);
         }
+        $this->aktuellerSpieler = $this->spieler[rand(0, sizeof($this->spieler)-1)];
+    }
+
+    public function addPlayer($spiel)
+    {
+        $this->spieler[] = $spieler;
     }
 
     /**
@@ -35,15 +46,37 @@ class Partie
         return serialize($this);
     }
 
+    public function nextTurn()
+    {
+        $index = array_search($this->aktuellerSpieler, $this->spieler);
+        $index++;
+        if($index >= sizeof($this->spieler)){
+            $index = 0;                                                         //prevent overflow
+        }
+        $this->aktuellerSpieler = $this->spieler[$index];
+    }
+
     public function getHtml(){
         //ToDo: Spielernamen anzeigen
-        echo "<header><h2><label for=\"feedback\">Tom ist am Zug</label> - <label for=\"ablauf\">Tom schlägt einen Gegner!</label></h2><h2></h2></header>";
-        echo "";
+        $spielerName = $this->aktuellerSpieler->getName();
+        $html = "";
 
-        echo "<table><tr>";
-            echo "<td>" . $this->spielfeld->getKartenstapelHtml() . "</td>";
-            echo "<td>" . $this->spielfeld->getSpielfeldHtml() . "</td>";
-        echo "</tr></table>";
+        $html .= "<main>";
+        $html .= "  <section id=\"interaktionsmenue\">";
+        $html .= "      <header>";
+        $html .= "          <span class=\"status\">$spielerName ist am Zug</span>";
+        $html .= "          <span class=\"notification\"> $spielerName schlägt einen Gegner!</span>";
+        $html .= "      </header>";
+        $html .= "      <section id=\"kartenstapel\">";
+        $html .=            $this->spielfeld->getKartenstapelHtml();
+        $html .= "      </section>";
+        $html .= "  </section>";
+        $html .= "  <section id=\"spielfeld\">";
+        $html .=        $this->spielfeld->getSpielfeldHtml();
+        $html .= "  </section>";
+        $html .= "</main>";
+
+        return $html;
     }
 
 

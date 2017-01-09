@@ -1,0 +1,92 @@
+#interaktionsmenue, #spielfeld {
+    float: left;
+}
+#interaktionsmenue {
+    width: 30%;
+}
+#spielfeld {
+    width: 70%;
+}
+
+#kartenstapel {}
+/* HEX Felder CSS */
+
+.hex {
+    float: left;
+    margin-left: 3px;
+    margin-bottom: -13px;
+    cursor: pointer;
+}
+
+.hex .top, .hex .bottom {
+    width: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+}
+.hex .middle {
+    width: 52px;
+    height: 30px;
+}
+
+/* default Hex */
+.hex.default .top {
+    border-bottom: 15px solid #6C6;
+}
+.hex.default .middle {
+    background: #6C6;
+}
+.hex.default .bottom {
+    border-top: 15px solid #6C6;
+}
+
+/* active Hex */
+.hex.active .top {
+    border-bottom: 15px solid #e38d13;
+}
+.hex.active .middle {
+    background: #e38d13;
+}
+.hex.active .bottom {
+    border-top: 15px solid #e38d13;
+}
+
+/* wall Hex */
+.hex.wall .top {
+    border-bottom: 15px solid #b92c28;
+}
+.hex.wall .middle {
+    background: #b92c28;
+}
+.hex.wall .bottom {
+    border-top: 15px solid #b92c28;
+}
+
+/* hovered Hex */
+.hex:hover .top {
+    border-bottom: 15px solid #28a4c9;
+}
+.hex:hover .middle {
+    background: #28a4c9;
+}
+.hex:hover .bottom {
+    border-top: 15px solid #28a4c9;
+}
+
+/* invisible Hex */
+.hex.invisible .top {
+    border-bottom: 15px solid #fff;
+}
+.hex.invisible .middle {
+    background: #fff;
+}
+.hex.invisible .bottom {
+    border-top: 15px solid #fff;
+}
+
+.hex-row {
+    clear: left;
+}
+
+.hex-row.even {
+    margin-left: 27.5px;
+}
