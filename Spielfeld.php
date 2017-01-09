@@ -14,10 +14,6 @@
 			<td><?php include("Gruppen_de/Spielfeld.php"); ?></td>
 		</tr>
 		
-		
-		
-			
-		
 		Optionen
 		<?php include("Gruppen_de/Optionen.php"); ?>
 	</body>
