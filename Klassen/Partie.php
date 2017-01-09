@@ -36,6 +36,7 @@ class Partie
     }
 
     public function getHtml(){
+        //ToDo: Spielernamen anzeigen
         echo "<header><h2><label for=\"feedback\">Tom ist am Zug</label> - <label for=\"ablauf\">Tom schlägt einen Gegner!</label></h2><h2></h2></header>";
         echo "";
 

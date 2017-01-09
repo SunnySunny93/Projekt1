@@ -34,8 +34,44 @@ class SpielFeld
      */
     public function getSpielfeldHtml()
     {
+        $html = "";
         //ToDO: generiere Spielfeld Tabelle JanR
-        return "<table></table>";
+        $html .= "<table id=\"spielfeld\" border=0 width='849px' height='746' background='Bilder/Spielfeld.png' background-size=auto>";
+		$html .= "<colgroup span='32' width=auto></colgroup>";
+		$html .= "<tr align='center' valign='center'>";
+        $html .= "<td colspan=34></td>";
+		$html .= "</tr>";
+
+        //spielfeld generieren
+        $rows = 15;
+        $cols = 8;
+        $span = 7;
+        $operator = 1;
+        $internal_id = 0;
+
+        for($row = 1;$row <= $rows;$row++) {
+            $html .= "<tr align='center' valign='center'>";
+            $html .= $span != 0 ? "<td colspan=$span></td>" : "";
+            for($col = 1;$col <= $cols;$col++) {
+                $internal_id++;
+                $id = $row . sprintf('%02d', $col);
+                $html .= "<td class=feld colspan=2 id=$internal_id>$id</td>";
+            }
+            $html .= $span != 0 ? "<td colspan=$span></td>" : "";
+            $html .= "</tr>";
+            if($cols >= $rows){
+                $operator = -1;
+            }
+            $cols += $operator;
+            $span -= $operator;
+
+        }
+
+        $html .= "<tr align='center' valign='center'>";
+        $html .= "<td colspan=34></td>";
+        $html .= "</tr>";
+        $html .= "</table>";
+        return $html;
     }
 
     /**
