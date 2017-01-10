@@ -59,14 +59,6 @@ class Kartenstapel
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
-        // for($i = 0;$i <= $this->limit;$i++){
-        //     //ToDO: Kartenverteilung einbauen
-        //     $bild = "";
-        //     $funktion = "";
-        //
-        //     //ToDO: Bereits gezogene karten berücksichtigen
-        //     $this->karten[] = new Karte($i, $bild, $funktion);
-        //}
     }
 
     public function nächsteKarte()

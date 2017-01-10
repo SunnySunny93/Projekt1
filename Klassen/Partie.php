@@ -33,12 +33,12 @@ class Partie
         $this->aktuellerSpieler = $this->spieler[rand(0, sizeof($this->spieler)-1)];
     }
 
-    public function addPlayer($spiel)
+    public function addPlayer($spieler)
     {
         $this->spieler[] = $spieler;
     }
 
-    public function nextTurn()
+    public function naechsterZug()
     {
         $index = array_search($this->aktuellerSpieler, $this->spieler);
         $index++;

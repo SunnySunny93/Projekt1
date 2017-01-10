@@ -22,14 +22,14 @@ class SpielFeld
     {
         if($felder == NULL){
             for($i = 0;$i < 169;$i++) {
-                $this->felder[] = new Feld($i, "");
+                $this->felder[] = new Feld($i, new SpielStein($spieler[rand(0, 5)]));
             }
-            $this->felder[1] = new Feld($i, new SpielStein($spieler[0]));
-            $this->felder[2] = new Feld($i, new SpielStein($spieler[0]));
-            $this->felder[3] = new Feld($i, new SpielStein($spieler[0]));
-            $this->felder[4] = new Feld($i, new SpielStein($spieler[0]));
-            $this->felder[5] = new Feld($i, new SpielStein($spieler[0]));
-            $this->felder[6] = new Feld($i, new SpielStein($spieler[0]));
+//            $this->felder[1] = new Feld($i, new SpielStein($spieler[0]));
+//            $this->felder[2] = new Feld($i, new SpielStein($spieler[1]));
+//            $this->felder[3] = new Feld($i, new SpielStein($spieler[2]));
+//            $this->felder[4] = new Feld($i, new SpielStein($spieler[3]));
+//            $this->felder[5] = new Feld($i, new SpielStein($spieler[4]));
+//            $this->felder[6] = new Feld($i, new SpielStein($spieler[5]));
 
             //print_r($this->felder);
         }
@@ -73,7 +73,7 @@ class SpielFeld
                 }else{
                     $icon = "";
                 }
-                $html .= "<div class=\"hex default\" id=\"" . $internal_id . "\" ><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\"> " . $id . " <img class=\"spielericon\" src=\"" . $icon . "\" /> </div><div class=\"bottom\"></div></div>";
+                $html .= "<div class=\"hex default\" id=\"" . $internal_id . "\" ><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\"><img class=\"spielericon\" src=\"" . $icon . "\" /> </div><div class=\"bottom\"></div></div>";
             }
             $html .= $span != 0 ? "<td colspan=$span></td>" : "";
             $html .= "</div>";
