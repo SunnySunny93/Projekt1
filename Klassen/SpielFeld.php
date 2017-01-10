@@ -85,8 +85,27 @@ class SpielFeld
      */
     public function mauerAuswerten($funktion, $liste)
     {
-        $this->setzen(1);
-        $this->entfernen(1);
+      $funktion = $funktion;
+      $liste = array explode ( "," , $liste );
+      $anzahl = sizeof($liste);
+      if (strpos($funktion,"setzen")!==false) {
+        for ($i=0; $i < $anzahl; $i++) {
+          $this->setzen($liste[$i]);
+        }
+      }
+      if (strpos($funktion,"entfernen")!==false) {
+        for ($i=0; $i < $anzahl; $i++) {
+          $this->entfernen($liste[$i]);
+        }
+      }
+      if (strpos($funktion,"verschieben")!==false) {
+        for ($i=0; $i < $anzahl/2; $i++) {              //geht das mit anzahl/2 ????
+          $this->entfernen($liste[$i]);
+        }
+        for ($i=$anzahl/2; $i < $anzahl; $i++) {
+          $this->setzen($liste[$i]);
+        }
+      }
     }
 
     /**

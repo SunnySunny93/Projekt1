@@ -58,15 +58,29 @@ class Partie
         $this->kartenstapel->nächsteKarte();
     }
 
-    private function karteAuswerten($funktion) {
+    private function karteAuswerten($steinFunktion) {
         //ToDo: Annika hier karte auswerten
+        $steinFunktion = this->$steinFunktion;
+        $anzahl = 0;
+        $funktion = "";
+    		if (strpos($steinFunktion,"Eins")!==false) {
+    			$anzahl = 1;
+    		} elseif (strpos($steinFunktion,"Zwei")!==false) {
+    			$anzahl = 2;
+    		} elseif (strpos($steinFunktion,"Drei")!==false) {
+    			$anzahl = 3;
+    		} elseif (strpos($steinFunktion,"Vier")!==false) {
+    			$anzahl = 4;
+    		}
 
-        /*
-         * Demo:
-         * $funktion = "setzen"
-         * $anzahl = 3;
-         */
-
+    		if (strpos($steinFunktion,"Setzen")!==false){
+    			$funktion = "setzen";
+    		} elseif (strpos($steinFunktion,"Verschieben")!==false) {
+    			$funktion = "verschieben";
+    		} elseif (strpos($steinFunktion,"Entfernen")!==false) {
+    			$funktion = "entfernen";
+    		}
+        //Ausgabe
     }
 
     public function getSpieler()
