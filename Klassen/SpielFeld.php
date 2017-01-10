@@ -134,8 +134,7 @@ class SpielFeld
      */
     public function mauerAuswerten($funktion, $liste)
     {
-      $funktion = $funktion;
-      $liste = array explode ( "," , $liste );
+      $liste = explode ( "," , $liste );
       $anzahl = sizeof($liste);
       if (strpos($funktion,"setzen")!==false) {
         for ($i=0; $i < $anzahl; $i++) {

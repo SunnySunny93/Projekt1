@@ -60,7 +60,6 @@ class Partie
 
     private function karteAuswerten($steinFunktion) {
         //ToDo: Annika hier karte auswerten
-        $steinFunktion = this->$steinFunktion;
         $anzahl = 0;
         $funktion = "";
     		if (strpos($steinFunktion,"Eins")!==false) {
