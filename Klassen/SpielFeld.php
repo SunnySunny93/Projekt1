@@ -3,11 +3,6 @@
 class SpielFeld
 {
     /**
-     * @var Kartenstapel
-     */
-    private $kartenstapel;
-
-    /**
      * @var Feld[]
      */
     private $felder;
@@ -32,9 +27,6 @@ class SpielFeld
 //            $this->felder[6] = new Feld($i, new SpielStein($spieler[5]));
 
             //print_r($this->felder);
-        }
-        if($kartenstapel == NULL){
-            $this->kartenstapel = new Kartenstapel();
         }
     }
 
@@ -88,21 +80,28 @@ class SpielFeld
     }
 
     /**
-     * @return string
+     * @param string $funktion
+     * @param string $liste
      */
-    public function getKartenstapelHtml()
+    public function mauerAuswerten($funktion, $liste)
     {
-        $this->kartenstapel->nächsteKarte();
-        return $this->kartenstapel->printKartenStapel();
+
     }
 
     /**
      * @param int $feldId
      */
-    public function einsSetzen($feldId){
+    public function setzen($feldId){
         $this->felder[$feldId]->setBelegung('Mauer');
     }
-    //ToDo: Mauer Funktionen Schreiben: Annika
+
+    /**
+     * @param int $feldId
+     */
+    public function entfernen($feldId){
+        $this->felder[$feldId]->setBelegung('');
+    }
+
     /**
      * @param int $start
      * @param int $ziel

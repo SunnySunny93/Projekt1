@@ -20,8 +20,8 @@
 	}
 	$anzahl = anzahl($katenName);
 	function mauer($katenName, $anzahl) {
-		$katenName = this->$katenName;
-		$anzahl = this->$anzahl;
+		$katenName = $this->$katenName;
+		$anzahl = $this->$anzahl;
 		if (strpos($katenName,"Setzen")!==false){
 			return "Setz $anzahl Mauerstück/e!";
 		} elseif (strpos($katenName,"Verschieben")!==false) {

@@ -87,7 +87,7 @@ class Kartenstapel
     /**
      * @return string
      */
-    public function printKartenStapel()
+    public function getKartenstapelHtml()
     {
         $bild = $this->offeneKarte->getBild();
         $html = "";

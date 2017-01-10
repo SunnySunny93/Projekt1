@@ -18,17 +18,26 @@ class Partie
     private $aktuellerSpieler;
 
     /**
+     * @var Kartenstapel
+     */
+    private $kartenstapel;
+
+    /**
      * Partie constructor.
      * @param array $spieler
      * @param SpielFeld $spielfeld
+     * @param KartenStapel $kartenstapel
      */
-    public function __construct($spieler, $spielfeld = NULL)
+    public function __construct($spieler, $spielfeld = NULL, $kartenstapel = NULL)
     {
         if(is_array($spieler)){
             $this->spieler = $spieler;
         }
         if($spielfeld == NULL) {
             $this->spielfeld = new SpielFeld($spieler);
+        }
+        if($kartenstapel == NULL){
+            $this->kartenstapel = new Kartenstapel();
         }
         $this->aktuellerSpieler = $this->spieler[rand(0, sizeof($this->spieler)-1)];
     }
@@ -46,6 +55,18 @@ class Partie
             $index = 0;                                                         //prevent overflow
         }
         $this->aktuellerSpieler = $this->spieler[$index];
+        $this->kartenstapel->nächsteKarte();
+    }
+
+    private function karteAuswerten($funktion) {
+        //ToDo: Annika hier karte auswerten
+
+        /*
+         * Demo:
+         * $funktion = "setzen"
+         * $anzahl = 3;
+         */
+
     }
 
     public function getSpieler()
@@ -66,7 +87,7 @@ class Partie
         $html .= "          <span class=\"notification\"> $spielerName schlägt einen Gegner!</span>";
         $html .= "      </header>";
         $html .= "      <section id=\"kartenstapel\">";
-        $html .=            $this->spielfeld->getKartenstapelHtml();
+        $html .=            $this->kartenstapel->getKartenstapelHtml();
         $html .= "      </section>";
         $html .= "      <section id=\"spielsteuerung\">";
         $html .= "          <button onclick=\"mauerFestlegen()\">Mauer so platzieren?</button>";
@@ -82,7 +103,6 @@ class Partie
         $html .=        $this->spielfeld->getSpielfeldHtml();
         $html .= "  </section>";
         $html .= "</main>";
-
 
         return $html;
     }
