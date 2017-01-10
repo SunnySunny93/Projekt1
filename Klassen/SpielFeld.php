@@ -85,20 +85,21 @@ class SpielFeld
      */
     public function mauerAuswerten($funktion, $liste)
     {
-
+        $this->setzen(1);
+        $this->entfernen(1);
     }
 
     /**
      * @param int $feldId
      */
-    public function setzen($feldId){
+    private function setzen($feldId){
         $this->felder[$feldId]->setBelegung('Mauer');
     }
 
     /**
      * @param int $feldId
      */
-    public function entfernen($feldId){
+    private function entfernen($feldId){
         $this->felder[$feldId]->setBelegung('');
     }
 
