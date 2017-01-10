@@ -68,6 +68,12 @@ class Partie
         $html .= "      <section id=\"kartenstapel\">";
         $html .=            $this->spielfeld->getKartenstapelHtml();
         $html .= "      </section>";
+        $html .= "      <section id=\"spielsteuerung\">";
+        $html .= "          <button onclick=\"mauerFestlegen()\">Mauer so platzieren?</button>";
+        $html .= "      </section>";
+        $html .= "      <section>";
+        $html .= "          <button onclick=\"zugBeenden()\">Zug beenden!</button>";
+        $html .= "      </section>";
         $html .= "      <section>";
         $html .= "          <button onclick=\"aufgeben()\">Spiel aufgeben?</button>";
         $html .= "      </section>";
