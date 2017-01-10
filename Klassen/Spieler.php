@@ -10,7 +10,7 @@ class Spieler
     /**
      * @var string
      */
-    private $icon = "spielericon.php";
+    private $icon = "";
 
     /**
      * @var string
@@ -21,11 +21,13 @@ class Spieler
      * Spieler constructor.
      * @param int $id
      * @param string $name
+     * @param string $icon
      */
-    public function __construct($id, $name)
+    public function __construct($id, $name, $icon)
     {
         $this->id = $id;
         $this->name = $name;
+        $this->icon = $icon;
     }
 
     /**

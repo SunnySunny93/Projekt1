@@ -24,13 +24,12 @@ class SpielStein
 
     /**
      * SpielStein constructor.
-     * @param int $id
      * @param Spieler $spieler
      * @param bool $dame
      */
-    public function __construct($id, $spieler, $dame = false)
+    public function __construct($spieler, $dame = false)
     {
-        $this->id = $id;
+        //$this->id = $id;
         $this->spieler = $spieler;
         $this->istDame = $dame;
         $this->icon = $spieler->getIcon();

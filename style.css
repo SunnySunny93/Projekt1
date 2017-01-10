@@ -11,6 +11,10 @@
 #kartenstapel {}
 /* HEX Felder CSS */
 
+.spielericon {
+    height: 20px;
+}
+
 .hex {
     float: left;
     margin-left: 3px;

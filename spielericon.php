@@ -1,7 +1,7 @@
 <?php
-	if (! empty($_GET['spielstein'] or $_GET['farbe'])){
+	if (! empty($_GET['form'] or $_GET['farbe'])){
 		header("Content-type: image/png");
-		$form = $_GET['spielstein'];
+		$form = $_GET['form'];
 		$farbe = $_GET['farbe'];
 
 		$image = imagecreate(200, 200);

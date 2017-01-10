@@ -21,8 +21,17 @@ class SpielFeld
     public function __construct($spieler, $felder = NULL, $kartenstapel = NULL)
     {
         if($felder == NULL){
-            //ToDo: Felder generieren
+            for($i = 0;$i < 169;$i++) {
+                $this->felder[] = new Feld($i, "");
+            }
+            $this->felder[1] = new Feld($i, new SpielStein($spieler[0]));
+            $this->felder[2] = new Feld($i, new SpielStein($spieler[0]));
+            $this->felder[3] = new Feld($i, new SpielStein($spieler[0]));
+            $this->felder[4] = new Feld($i, new SpielStein($spieler[0]));
+            $this->felder[5] = new Feld($i, new SpielStein($spieler[0]));
+            $this->felder[6] = new Feld($i, new SpielStein($spieler[0]));
 
+            //print_r($this->felder);
         }
         if($kartenstapel == NULL){
             $this->kartenstapel = new Kartenstapel();
@@ -58,8 +67,13 @@ class SpielFeld
             for($col = 1;$col <= $cols;$col++) {
                 $internal_id++;
                 $id = $row . sprintf('%02d', $col);
-                //$html .= "<td class=feld colspan=2 id=$internal_id>$id</td>";
-                $html .= "<div class=\"hex default\"><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\">" . $id . " </div><div class=\"bottom\"></div></div>";
+                $feldbelegung = $this->felder[$internal_id-1]->getBelegung();
+                if($feldbelegung instanceof SpielStein) {
+                    $icon = $feldbelegung->getIcon();
+                }else{
+                    $icon = "";
+                }
+                $html .= "<div class=\"hex default\" id=\"" . $internal_id . "\" ><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\"> " . $id . " <img class=\"spielericon\" src=\"" . $icon . "\" /> </div><div class=\"bottom\"></div></div>";
             }
             $html .= $span != 0 ? "<td colspan=$span></td>" : "";
             $html .= "</div>";

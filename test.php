@@ -1,17 +1,17 @@
 <?php
   include("require.php");
-//session_unset();
+session_unset();
 
 if (isset($_SESSION['partie']))
 {
     $partie = $_SESSION['partie'];
 }else{
-    $spieler[] = new Spieler(0, "Jan");
-    $spieler[] = new Spieler(1, "Annika");
-    $spieler[] = new Spieler(2, "Andreas");
-    $spieler[] = new Spieler(3, "Jenny");
-    $spieler[] = new Spieler(4, "Thomas");
-    $spieler[] = new Spieler(5, "Kim");
+    $spieler[] = new Spieler(0, "Jan", "spielericon.php?form=dreieck&farbe=72152b");
+    $spieler[] = new Spieler(1, "Annika", "spielericon.php?form=kreis&farbe=255ca8");
+    $spieler[] = new Spieler(2, "Andreas", "spielericon.php?form=quadrat&farbe=000000");
+    $spieler[] = new Spieler(3, "Jenny", "spielericon.php?form=kreis&farbe=00ff00");
+    $spieler[] = new Spieler(4, "Thomas", "spielericon.php?form=quadrat&farbe=ffa500");
+    $spieler[] = new Spieler(5, "Kim", "spielericon.php?form=dreieck&farbe=817959");
     $partie = new Partie($spieler);
     $_SESSION['partie'] = $partie;
 }
