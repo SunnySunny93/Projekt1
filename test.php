@@ -22,17 +22,18 @@ $partie->nextTurn();
 
 <!DOCTYPE html>
 <html lang=de>
-
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dame 2.0</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <script src="functions.js"></script>
     </head>
 
     <body>
         <?php echo $html; ?>
     </body>
+
 
 </html>

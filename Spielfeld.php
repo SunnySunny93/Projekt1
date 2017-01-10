@@ -10,13 +10,9 @@
 
 		<script>
 			function aufgeben() {
-			    var x;
 			    if (confirm("Möchtest du wirklich die Partie beenden?") == true) {
-			        x = "You pressed OK!";			//link zu spielende.php
-			    } else {
-			        x = "You pressed Cancel!";	//fenster schließen ohne etwas zu tun
+                    window.location="spielende.php";
 			    }
-			    document.getElementById("demo").innerHTML = x;
 			}
 		</script>
 		<!-- III Spielinformationen -->

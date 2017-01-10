@@ -68,11 +68,15 @@ class Partie
         $html .= "      <section id=\"kartenstapel\">";
         $html .=            $this->spielfeld->getKartenstapelHtml();
         $html .= "      </section>";
+        $html .= "      <section>";
+        $html .= "          <button onclick=\"aufgeben()\">Spiel aufgeben?</button>";
+        $html .= "      </section>";
         $html .= "  </section>";
         $html .= "  <section id=\"spielfeld\">";
         $html .=        $this->spielfeld->getSpielfeldHtml();
         $html .= "  </section>";
         $html .= "</main>";
+
 
         return $html;
     }
