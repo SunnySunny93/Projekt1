@@ -1,5 +1,5 @@
 <!-- IV Spiel Starten -->
-
+<h2>Spiele ein Spiel gegen zufällige andere Spieler</h2>
 <input type="button" value="Einem zufälligen Spiel beitreten">
 <h2>Oder lade Freunde in eine Partie ein</h2>
 <form>

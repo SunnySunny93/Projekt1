@@ -25,8 +25,6 @@
 
 
 			<!-- IV Spiel starten -->
-
-			<h2>Spiele ein Spiel gegen zufällige andere Spieler</h2>
 			<?php include("Gruppen_de/SpielStarten.php"); ?>
 		</main>
 	</body>
