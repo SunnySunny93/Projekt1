@@ -76,6 +76,17 @@
     border-top: 15px solid #28a4c9;
 }
 
+/* sperrfeld Hex */
+.hex.sperrfeld .top {
+    border-bottom: 15px solid #274F27;
+}
+.hex.sperrfeld .middle {
+    background: #274F27;
+}
+.hex.sperrfeld .bottom {
+    border-top: 15px solid #274F27;
+}
+
 /* invisible Hex */
 .hex.invisible .top {
     border-bottom: 15px solid #fff;

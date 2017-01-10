@@ -3,6 +3,53 @@
 class SpielFeld
 {
     /**
+     * @var array
+     */
+    private $feldbelegung= array(
+        1 => "Sperrfeld",
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+        6 => 0,
+        7 => 0,
+        8 => "Sperrfeld",
+        17 => 1,
+        27 => 1,
+        38 => 1,
+        50 => 1,
+        63 => 1,
+        77 => 1,
+        92 => "Sperrfeld",
+        9 => 5,
+        18 => 5,
+        28 => 5,
+        39 => 5,
+        51 => 5,
+        64 => 5,
+        78 => "Sperrfeld",
+        93 => 4,
+        107 => 4,
+        120 => 4,
+        132 => 4,
+        143 => 4,
+        153 => 4,
+        162 => "Sperrfeld",
+        163 => 3,
+        164 => 3,
+        165 => 3,
+        166 => 3,
+        167 => 3,
+        168 => 3,
+        169 => "Sperrfeld",
+        106 => 2,
+        119 => 2,
+        131 => 2,
+        142 => 2,
+        152 => 2,
+        161 => 2);
+
+    /**
      * @var Feld[]
      */
     private $felder;
@@ -17,16 +64,14 @@ class SpielFeld
     {
         if($felder == NULL){
             for($i = 0;$i < 169;$i++) {
-                $this->felder[] = new Feld($i, new SpielStein($spieler[rand(0, 5)]));
+                $this->felder[] = new Feld($i, "");
             }
-//            $this->felder[1] = new Feld($i, new SpielStein($spieler[0]));
-//            $this->felder[2] = new Feld($i, new SpielStein($spieler[1]));
-//            $this->felder[3] = new Feld($i, new SpielStein($spieler[2]));
-//            $this->felder[4] = new Feld($i, new SpielStein($spieler[3]));
-//            $this->felder[5] = new Feld($i, new SpielStein($spieler[4]));
-//            $this->felder[6] = new Feld($i, new SpielStein($spieler[5]));
-
-            //print_r($this->felder);
+            foreach ($this->feldbelegung AS $index => $feldbelegung) {
+                if($feldbelegung !== "Sperrfeld"){
+                    $feldbelegung = new SpielStein($spieler[$feldbelegung]);
+                }
+                $this->felder[$index-1]->setBelegung($feldbelegung);
+            }
         }
     }
 
@@ -58,14 +103,18 @@ class SpielFeld
             }
             for($col = 1;$col <= $cols;$col++) {
                 $internal_id++;
+                $class = "default";
                 $id = $row . sprintf('%02d', $col);
                 $feldbelegung = $this->felder[$internal_id-1]->getBelegung();
                 if($feldbelegung instanceof SpielStein) {
-                    $icon = $feldbelegung->getIcon();
+                    $icon = "<img class=\"spielericon\" src=\"" . $feldbelegung->getIcon() . "\" /> ";
+                }elseif($feldbelegung == "Sperrfeld") {
+                    $class = "sperrfeld";
+                    $icon = "";
                 }else{
                     $icon = "";
                 }
-                $html .= "<div class=\"hex default\" id=\"" . $internal_id . "\" ><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\"><img class=\"spielericon\" src=\"" . $icon . "\" /> </div><div class=\"bottom\"></div></div>";
+                $html .= "<div class=\"hex " . $class . "\" id=\"" . $internal_id . "\" ><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\">" . $icon . "</div><div class=\"bottom\"></div></div>";
             }
             $html .= $span != 0 ? "<td colspan=$span></td>" : "";
             $html .= "</div>";

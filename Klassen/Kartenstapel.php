@@ -40,25 +40,26 @@ class Kartenstapel
         $j = 0;
         for ($i=0; $i < $anzahlSetzenKarten; $i++) {
           $zufallszahl = rand(0,3);
-          $bild = "Bilder/" . $setzenKarten[$zufallszahl] . ".png";
+          $bild = "../bilder/" . $setzenKarten[$zufallszahl] . ".png";
           $funktion = $setzenKarten[$zufallszahl];
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
         for ($i=0; $i < $anzahlVerschiebenKarten; $i++) {
           $zufallszahl = rand(0,3);
-          $bild = "Bilder/" . $verschiebenKarten[$zufallszahl] . ".png";
+          $bild = "../bilder/" . $verschiebenKarten[$zufallszahl] . ".png";
           $funktion = $verschiebenKarten[$zufallszahl];
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
         for ($i=0; $i < $anzahlEntfernenKarten; $i++) {
           $zufallszahl = rand(0,3);
-          $bild = "Bilder/" . $entfernenKarten[$zufallszahl] . ".png";
+          $bild = "../bilder/" . $entfernenKarten[$zufallszahl] . ".png";
           $funktion = $entfernenKarten[$zufallszahl];
           $j++;
           $this->karten[] = new Karte($j, $bild, $funktion);
         }
+        $this->nächsteKarte();
     }
 
     public function nächsteKarte()
@@ -92,7 +93,7 @@ class Kartenstapel
         $bild = $this->offeneKarte->getBild();
         $html = "";
 
-        $html .= "    <img src='Bilder/Kartenstapel.png' width='120' height='180' alt='Bild vom Kartenrücken'>";
+        $html .= "    <img src='../bilder/Kartenstapel.png' width='120' height='180' alt='Bild vom Kartenrücken'>";
         $html .= "    <img src='$bild' width='120' height='180' alt='Das ist deine Karte'>";
 
         return $html;

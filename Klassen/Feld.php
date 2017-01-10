@@ -45,7 +45,7 @@ class Feld
      */
     public function setBelegung($belegung)
     {
-        if($belegung == "" || $belegung == "Mauer" || $belegung instanceof SpielStein){
+        if($belegung == "" || $belegung == "Mauer" || $belegung == "Sperrfeld" || $belegung instanceof SpielStein){
             $this->belegung = $belegung;
             return true;
         }else{
