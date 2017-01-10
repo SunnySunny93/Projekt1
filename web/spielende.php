@@ -6,13 +6,13 @@
 	</head>
 	<body>
 		<!-- I Spielende -->
-		<h1> Du hast GEWONNEN! </h1>
+		<h1></h1>
 		<!-- II Spielstatistik -->
 		<?php include("Gruppen_de/statistik.php"); ?>
-		
+
 		Das waren deine Mitspieler:
 		<?php include("Gruppen_de/Mitspieler.php"); ?>
-		
+
 		<?php include("Gruppen_de/NeuesSpiel.html"); ?>
 	</body>
 </html>
