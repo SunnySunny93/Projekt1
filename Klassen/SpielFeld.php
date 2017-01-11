@@ -216,8 +216,13 @@ class SpielFeld
      * @param int $ziel
      * @param Spieler $spieler
      */
-    private function isNachbar($start, $ziel, $spieler, $dame)
+    private function isNachbar($start, $ziel, $spieler)
     {
+        $dame = false;
+        $belegung = $this->felder[$ziel]->getBelegung();
+        if($belegung instanceof SpielStein) {
+            $dame = $belegung->isDame();
+        }
       $haus = $spieler->getId();
       $startid = $this->felder[$start]->getId();
       $zielid = $this->felder[$ziel]->getId();
@@ -254,15 +259,14 @@ class SpielFeld
         $startbelegung = $this->felder[$start]->getBelegung();
         $zielbelegung = $this->felder[$ziel]->getBelegung();
         if ($startbelegung instanceof SpielStein) {
-            $dame = $belegung->isDame();
-            if ($this->isNachbar($start, $ziel, $spieler, $dame)) {
+            if ($this->isNachbar($start, $ziel, $spieler)) {
               $this->felder[$start]->setBelegung('Mauer');  //hier Stein einfügen
               $this->felder[$ziel]->setBelegung('');        //hier alten Stein löschen
             } else {
               //Fehlermeldung
             }
         } else {
-            "Kein Stein gewählt"
+            echo "Kein Stein gewählt";
         }
 
 
