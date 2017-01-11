@@ -256,8 +256,8 @@ class SpielFeld
      public function isRichtigerSpielstein($feldId, $spielerId)
      {
         $belegung = $this->felder[$feldId]->getBelegung();
-        $spieler = $this->belegung->getSpieler();
-        if($this->spieler->getId()==$spilerId){
+        $spieler = $belegung->getSpieler();
+        if($spieler->getId()==$spielerId){
           return true;
         } else {
           return false;
