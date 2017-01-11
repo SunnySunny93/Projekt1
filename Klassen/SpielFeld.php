@@ -258,15 +258,16 @@ class SpielFeld
         $haus = $spieler->getId();
         $startbelegung = $this->felder[$start]->getBelegung();
         $zielbelegung = $this->felder[$ziel]->getBelegung();
-        if ($startbelegung instanceof SpielStein) {
-            if ($this->isNachbar($start, $ziel, $spieler)) {
-              $this->felder[$start]->setBelegung('Mauer');  //hier Stein einfügen
-              $this->felder[$ziel]->setBelegung('');        //hier alten Stein löschen
+        if ($startbelegung instanceof SpielStein && ) {
+          if ($zielbelegung == '') {
+            if ($this->isNachbar($start, $ziel, $spieler)) {        //Normales Stein ziehen
+              $this->felder[$ziel]->setBelegung($startbelegung);
+              $this->felder[$start]->setBelegung('');
             } else {
-              //Fehlermeldung
+
             }
         } else {
-            echo "Kein Stein gewählt";
+
         }
 
 
