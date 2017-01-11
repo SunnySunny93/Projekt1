@@ -1,12 +1,14 @@
 var funktion = "";
 var anzahl = 0;
+var spieler = "";
 var mauern = [];
 var ajax_abfrage = new XMLHttpRequest();                     // neues AJAX request objekt
 ajax_abfrage.onload = function() {                           // funktion nach dem call
     var response = JSON.parse(this.responseText);       // umwandeln von JSON String in objekt
-    console.log(response.funktion, response.anzahl);    // debug ausgabe der empfangenen werte
-    funktion = response.funktion;                       // funktions variable global abspeichern
-    anzahl = response.anzahl;                           // anzahl variable global abspeichern
+    console.log(response.karte.funktion, response.karte.anzahl, response.spieler);    // debug ausgabe der empfangenen werte
+    funktion = response.karte.funktion;                       // funktions variable global abspeichern
+    anzahl = response.karte.anzahl;                           // anzahl variable global abspeichern
+    spieler = response.spieler;
     if(funktion == "verschieben") {
         anzahl = anzahl*2;
     }
@@ -23,18 +25,29 @@ function aufgeben()
 
 function hexagon()
 {
-    var current_classes = this.getAttribute("class");
-
-    if(current_classes.indexOf("active") > 0){
-        current_classes = current_classes.replace(" active", "");
-        this.setAttribute("class", current_classes);
-        mauern.splice(mauern.indexOf(this), 1);
+    var klickable = false;
+    if(this.getElementsByClassName("spielericon").length <= 0){
+        klickable = true;
+    }else if(this.getElementsByClassName("spieler"+spieler).length > 0){
+        klickable = true;
     }else{
-        if(document.getElementsByClassName('active').length < anzahl) { // wenn weniger felder aktiv sind als möglich
-            this.setAttribute("class", current_classes + " active");
-            mauern.push(this);
+        klickable = false;
+    }
+
+    if(klickable){
+        var current_classes = this.getAttribute("class");
+
+        if(current_classes.indexOf("active") > 0){
+            current_classes = current_classes.replace(" active", "");
+            this.setAttribute("class", current_classes);
+            mauern.splice(mauern.indexOf(this), 1);
         }else{
-            alert("du kannst nur " + anzahl + " felder auswählen");
+            if(document.getElementsByClassName('active').length < anzahl) { // wenn weniger felder aktiv sind als möglich
+                this.setAttribute("class", current_classes + " active");
+                mauern.push(this);
+            }else{
+                alert("du kannst nur " + anzahl + " felder auswählen");
+            }
         }
     }
 }

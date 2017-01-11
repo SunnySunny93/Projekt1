@@ -101,6 +101,16 @@ class Partie
         return $this->spieler;
     }
 
+    /**
+     * @return Spieler
+     */
+    public function getAktuellerSpieler()
+    {
+        return $this->aktuellerSpieler;
+    }
+
+
+
     public function getHtml()
     {
         //ToDo: Spielernamen anzeigen
