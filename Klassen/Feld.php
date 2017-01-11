@@ -32,7 +32,7 @@ class Feld
     }
 
     /**
-     * @return SpielStein/string
+     * @return mixed
      */
     public function getBelegung()
     {
