@@ -256,7 +256,8 @@ class SpielFeld
         if ($startbelegung instanceof SpielStein) {
             $dame = $belegung->isDame();
             if ($this->isNachbar($start, $ziel, $spieler, $dame)) {
-              
+              $this->felder[$start]->setBelegung('Mauer');  //hier Stein einfügen
+              $this->felder[$ziel]->setBelegung('');        //hier alten Stein löschen
             } else {
               //Fehlermeldung
             }
