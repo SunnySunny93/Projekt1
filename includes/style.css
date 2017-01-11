@@ -65,6 +65,17 @@
     border-top: 15px solid #b92c28;
 }
 
+/* wall active Hex */
+.hex.wall.active .top {
+    border-bottom: 15px solid #FF352F;
+}
+.hex.wall.active .middle {
+    background: #FF352F;
+}
+.hex.wall.active .bottom {
+    border-top: 15px solid #FF352F;
+}
+
 /* hovered Hex */
 .hex:hover .top {
     border-bottom: 15px solid #28a4c9;

@@ -1,6 +1,6 @@
 <?php
   include("../includes/require.php");
-session_unset();
+//session_unset();
 
 if (isset($_SESSION['partie']))
 {
@@ -15,9 +15,8 @@ if (isset($_SESSION['partie']))
     $partie = new Partie($spieler);
     $_SESSION['partie'] = $partie;
 }
-
-$html = $partie->getHtml();
 $partie->naechsterZug();
+$html = $partie->getHtml();
 ?>
 
 <!DOCTYPE html>

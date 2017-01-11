@@ -47,6 +47,14 @@ class Partie
         $this->spieler[] = $spieler;
     }
 
+    /**
+     * @return SpielFeld
+     */
+    public function getSpielfeld()
+    {
+        return $this->spielfeld;
+    }
+
     public function naechsterZug()
     {
         $index = array_search($this->aktuellerSpieler, $this->spieler);
@@ -58,28 +66,34 @@ class Partie
         $this->kartenstapel->nächsteKarte();
     }
 
-    private function karteAuswerten($steinFunktion) {
-        //ToDo: Annika hier karte auswerten
+    /**
+     * @return string
+     */
+    public function karteAuswerten() {
+        $steinFunktion = $this->kartenstapel->getOffeneKarte()->getFunktion();
         $anzahl = 0;
         $funktion = "";
-    		if (strpos($steinFunktion,"Eins")!==false) {
-    			$anzahl = 1;
-    		} elseif (strpos($steinFunktion,"Zwei")!==false) {
-    			$anzahl = 2;
-    		} elseif (strpos($steinFunktion,"Drei")!==false) {
-    			$anzahl = 3;
-    		} elseif (strpos($steinFunktion,"Vier")!==false) {
-    			$anzahl = 4;
-    		}
 
-    		if (strpos($steinFunktion,"Setzen")!==false){
-    			$funktion = "setzen";
-    		} elseif (strpos($steinFunktion,"Verschieben")!==false) {
-    			$funktion = "verschieben";
-    		} elseif (strpos($steinFunktion,"Entfernen")!==false) {
-    			$funktion = "entfernen";
-    		}
+        if (strpos($steinFunktion,"Eins")!==false) {
+            $anzahl = 1;
+        } elseif (strpos($steinFunktion,"Zwei")!==false) {
+            $anzahl = 2;
+        } elseif (strpos($steinFunktion,"Drei")!==false) {
+            $anzahl = 3;
+        } elseif (strpos($steinFunktion,"Vier")!==false) {
+            $anzahl = 4;
+        }
+
+        if (strpos($steinFunktion,"Setzen")!==false){
+            $funktion = "setzen";
+        } elseif (strpos($steinFunktion,"Verschieben")!==false) {
+            $funktion = "verschieben";
+        } elseif (strpos($steinFunktion,"Entfernen")!==false) {
+            $funktion = "entfernen";
+        }
         //Ausgabe
+        return array("funktion" => $funktion, "anzahl" => $anzahl);
+        //return "<script type='javascript'>var funktion = \"" . $funktion . "\";var anzahl = \"" . $anzahl . "\";</script>";
     }
 
     public function getSpieler()
@@ -102,15 +116,15 @@ class Partie
         $html .= "      <section id=\"kartenstapel\">";
         $html .=            $this->kartenstapel->getKartenstapelHtml();
         $html .= "      </section>";
-        $html .= "      <section id=\"spielsteuerung\">";
+        $html .= "      <menu id=\"spielsteuerung\">";
         $html .= "          <button onclick=\"mauerFestlegen()\">Mauer so platzieren?</button>";
-        $html .= "      </section>";
-        $html .= "      <section>";
+        $html .= "          <br/>";
         $html .= "          <button onclick=\"zugBeenden()\">Zug beenden!</button>";
-        $html .= "      </section>";
-        $html .= "      <section>";
+        $html .= "          <br/>";
         $html .= "          <button onclick=\"aufgeben()\">Spiel aufgeben?</button>";
-        $html .= "      </section>";
+        $html .= "          <br/>";
+        $html .= "          <button onclick=\"reset()\">reset</button>";
+        $html .= "      </menu>";
         $html .= "  </section>";
         $html .= "  <section id=\"spielfeld\">";
         $html .=        $this->spielfeld->getSpielfeldHtml();
