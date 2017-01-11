@@ -134,11 +134,11 @@ class SpielFeld
     /**
      * @param array $json
      */
-    public function javasriptAuswerten($json)
+    public function javascriptAuswerten($json)
     {
-        if($json->funktion == "ziehen"){
+        if ($json->funktion == "ziehen") {
             $this->spielerZieht($json->list[0], $json->list[1]);
-        }else{
+        } else {
             $this->mauerAuswerten($json);
         }
     }
@@ -288,7 +288,7 @@ class SpielFeld
     /**
      * @param int $start
      * @param int $ziel
-     * @param array $haus
+     * @param int $haus
      */
     private function steinSchlagen($start, $ziel, $haus)
     {
@@ -311,6 +311,7 @@ class SpielFeld
             } else {
                 $endpunkte = array($startPunkt - 200, $startPunkt - 202, $startPunkt + 200, $startPunkt + 198);
             }
+            $endpunkte = array_push($endpunkte, $startPunkt + 1, $startPunkt - 1);
         } else {
             if ($startPunkt < 700) {
                 $endpunkte = array($startPunkt + 200, $startPunkt + 202);

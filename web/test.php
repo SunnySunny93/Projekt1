@@ -15,7 +15,6 @@ if (isset($_SESSION['partie']))
     $partie = new Partie($spieler);
     $_SESSION['partie'] = $partie;
 }
-$partie->naechsterZug();
 $html = $partie->getHtml();
 ?>
 
