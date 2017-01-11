@@ -211,19 +211,24 @@ class SpielFeld
           break;
       }
     }
+    private function damePruefen($ziel) //was muss übergeben werden?
+    {
+      $dame = false;
+      $belegung = $this->felder[$ziel]->getBelegung();
+      if($belegung instanceof SpielStein) {
+          $dame = $belegung->isDame();
+      }
+      return $dame;
+    }
+
     /**
      * @param int $start
      * @param int $ziel
-     * @param Spieler $spieler
+     * @param array $haus
      */
-    private function isNachbar($start, $ziel, $spieler)
+    private function isNachbar($start, $ziel, $haus)
     {
-        $dame = false;
-        $belegung = $this->felder[$ziel]->getBelegung();
-        if($belegung instanceof SpielStein) {
-            $dame = $belegung->isDame();
-        }
-      $haus = $spieler->getId();
+      $dame = $this->damePruefen($ziel);
       $startid = $this->felder[$start]->getId();
       $zielid = $this->felder[$ziel]->getId();
       $hausArray = $this->getHaus($haus);
@@ -264,6 +269,44 @@ class SpielFeld
         }
      }
 
+     /**
+      * @param int $start
+      * @param int $ziel
+      * @param array $haus
+      */
+     private function steinSchlagen($start, $ziel, $haus)
+     {
+        $dame= $this->damePruefen($ziel);
+        $startid = $this->felder[$start]->getId();
+        $zielid = $this->felder[$ziel]->getId();
+        $hausArray = $this->getHaus($haus);
+        $startPunkt = $hausArray[$startid];
+        $zielPunkt = $hausArray[$zielid];
+        if ($dame){
+          if ($startPunkt<700) {
+            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+200, $startPunkt+202);
+          } elseif ($startPunkt>700 && $startPunkt<800) {
+            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+199, $startPunkt+201);
+          } elseif ($startPunkt>800 && $startPunkt<900) {
+            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+198, $startPunkt+200);
+          } elseif ($startPunkt>900 && $startPunkt<1000) {
+            $endpunkte = array ($startPunkt-201, $startPunkt-199, $startPunkt+198, $startPunkt+200);
+          } else {
+            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+200, $startPunkt+198);
+          }
+        } else {
+          if ($startPunkt<700) {
+            $endpunkte = array ($startPunkt+200, $startPunkt+202);
+          } elseif ($startPunkt>700 && $startPunkt<800) {
+            $endpunkte = array ($startPunkt+199, $startPunkt+201);
+          } elseif ($startPunkt>800 && $startPunkt<1000) {
+            $endpunkte = array ($startPunkt+198, $startPunkt+200);
+          } else {
+            $endpunkte = array ($startPunkt+200, $startPunkt+198);
+          }
+        }
+     }
+
     /**
      * @param int $start
      * @param int $ziel
@@ -276,11 +319,11 @@ class SpielFeld
         $zielbelegung = $this->felder[$ziel]->getBelegung();
         if ($startbelegung instanceof SpielStein) {
           if ($zielbelegung == '') {
-            if ($this->isNachbar($start, $ziel, $spieler)) {        //Normales Stein ziehen
+            if ($this->isNachbar($start, $ziel, $haus)) {        //Normales Stein ziehen
               $this->felder[$ziel]->setBelegung($startbelegung);
               $this->felder[$start]->setBelegung('');
             } else {
-
+              steinSchlagen();
             }
         } else {
 
