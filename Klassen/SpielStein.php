@@ -31,7 +31,7 @@ class SpielStein
     {
         //$this->id = $id;
         $this->spieler = $spieler;
-        $this->istDame = $dame;
+        $this->isDame = $dame;
         $this->icon = $spieler->getIcon();
     }
 

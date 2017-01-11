@@ -216,7 +216,7 @@ class SpielFeld
      * @param int $ziel
      * @param Spieler $spieler
      */
-    private function isNachbar($start, $ziel, $spieler)
+    private function isNachbar($start, $ziel, $spieler, $dame)
     {
       $haus = $spieler->getId();
       $startid = $this->felder[$start]->getId();
@@ -224,7 +224,19 @@ class SpielFeld
       $hausArray = $this->getHaus($haus);
       $startPunkt = $hausArray[$startid];
       $zielPunkt = $hausArray[$zielid];
-      $nachbarn = array ($startPunkt+1, $startPunkt-1, $startPunkt+100, $startPunkt-100, $starPunktt+101, $startPunkt-101); //Potentielle Nachbarn
+      if ($dame){
+        if ($startPunkt<800) {
+          $nachbarn = array ($startPunkt+1, $startPunkt-1, $startPunkt+100, $startPunkt-100, $starPunktt+101, $startPunkt-101); //Potentielle Nachbarn
+        } else {
+          $nachbarn = array ($startPunkt+1, $startPunkt-1, $startPunkt+100, $startPunkt-100, $starPunktt+99, $startPunkt-99);
+        }
+      } else {
+        if ($startPunkt<800) {
+          $nachbarn = array ($startPunkt+100, $startPunkt+101);
+        } else {
+          $nachbarn = array ($startPunkt+100, $startPunkt+99);
+        }
+      }
       if (array_search($zielPunkt, $nachbarn)!= false) {
         return true;
       } else {
@@ -241,9 +253,15 @@ class SpielFeld
         $haus = $spieler->getId();
         $startbelegung = $this->felder[$start]->getBelegung();
         $zielbelegung = $this->felder[$ziel]->getBelegung();
-
         if ($startbelegung instanceof SpielStein) {
-
+            $dame = $belegung->isDame();
+            if ($this->isNachbar($start, $ziel, $spieler, $dame)) {
+              
+            } else {
+              //Fehlermeldung
+            }
+        } else {
+            "Kein Stein gewählt"
         }
 
 
