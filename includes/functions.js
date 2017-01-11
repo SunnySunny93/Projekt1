@@ -2,6 +2,9 @@ var funktion = "";
 var anzahl = 0;
 var spieler = "";
 var mauern = [];
+var felder = [];
+var wall_count = 0;
+var move_count = 0;
 var ajax_abfrage = new XMLHttpRequest();                     // neues AJAX request objekt
 ajax_abfrage.onload = function() {                           // funktion nach dem call
     var response = JSON.parse(this.responseText);       // umwandeln von JSON String in objekt
@@ -26,13 +29,18 @@ function aufgeben()
 function hexagon()
 {
     var klickable = false;
+    var movable = false;
     if(this.getElementsByClassName("spielericon").length <= 0){
         klickable = true;
     }else if(this.getElementsByClassName("spieler"+spieler).length > 0){
-        klickable = true;
+        movable = true;
+        if(wall_count > 0){
+            klickable = true;
+        }
     }else{
         klickable = false;
     }
+    console.log(klickable);
 
     if(klickable){
         var current_classes = this.getAttribute("class");
@@ -43,13 +51,37 @@ function hexagon()
             mauern.splice(mauern.indexOf(this), 1);
         }else{
             if(document.getElementsByClassName('active').length < anzahl) { // wenn weniger felder aktiv sind als möglich
-                this.setAttribute("class", current_classes + " active");
-                mauern.push(this);
+                console.log("wall_count: ", wall_count);
+                console.log("movable: ", movable);
+                console.log("length: ", felder.length);
+                if(wall_count <= 0){
+                    this.setAttribute("class", current_classes + " active");
+                    mauern.push(this);
+                }else if(movable && felder.length <= 0){
+                    this.setAttribute("class", current_classes + " active");
+                    felder = [this]
+                }else if(felder.length > 0){
+                    this.setAttribute("class", current_classes + " active");
+                    felder.push(this);
+                }
             }else{
                 alert("du kannst nur " + anzahl + " felder auswählen");
             }
         }
     }
+}
+
+function steinBewegen()
+{
+    var ajax_antwort = new XMLHttpRequest();
+    ajax_antwort.onload = function() {
+        console.log(this.responseText);
+        move_count++;
+        //location.reload();
+    };
+    ajax_antwort.open("POST", "../includes/ajax.php");
+    ajax_antwort.setRequestHeader("Content-Type", "application/json");
+    ajax_antwort.send(JSON.stringify({funktion:"ziehen", liste:liste}));
 }
 
 function mauerFestlegen()
@@ -63,17 +95,25 @@ function mauerFestlegen()
     var ajax_antwort = new XMLHttpRequest();
     ajax_antwort.onload = function() {
         console.log(this.responseText);
-        location.reload();
+        wall_count++;
+        anzahl = 2;
+        funktion = "ziehen";
+        //location.reload();
     };
     ajax_antwort.open("POST", "../includes/ajax.php");
     ajax_antwort.setRequestHeader("Content-Type", "application/json");
     ajax_antwort.send(JSON.stringify({funktion:funktion, liste:liste}));
-
-
 }
 
 function zugBeenden() {
-    
+    var beenden_antwort = new XMLHttpRequest();
+    beenden_antwort.onload = function() {
+        console.log(this.responseText);
+        location.reload();
+    };
+    beenden_antwort.open("POST", "../includes/ajax.php");
+    beenden_antwort.setRequestHeader("Content-Type", "application/json");
+    beenden_antwort.send(JSON.stringify({funktion: "naechsterZug"}));
 }
 
 function reset() {

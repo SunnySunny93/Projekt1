@@ -134,11 +134,11 @@ class SpielFeld
     /**
      * @param array $json
      */
-    public function javasriptAuswerten($json)
+    public function javascriptAuswerten($json)
     {
-        if($json->funktion == "ziehen"){
+        if ($json->funktion == "ziehen") {
             $this->spielerZieht($json->list[0], $json->list[1]);
-        }else{
+        } else {
             $this->mauerAuswerten($json);
         }
     }
@@ -288,7 +288,7 @@ class SpielFeld
     /**
      * @param int $start
      * @param int $ziel
-     * @param array $haus
+     * @param int $haus
      */
     private function steinSchlagen($start, $ziel, $haus)
     {
@@ -298,21 +298,7 @@ class SpielFeld
         $hausArray = $this->getHaus($haus);
         $startPunkt = $hausArray[$startid];
         $zielPunkt = $hausArray[$zielid];
-<<<<<<< HEAD
-        if ($dame){
-          if ($startPunkt<700) {
-            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+200, $startPunkt+202);
-          } elseif ($startPunkt>700 && $startPunkt<800) {
-            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+199, $startPunkt+201);
-          } elseif ($startPunkt>800 && $startPunkt<900) {
-            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+198, $startPunkt+200);
-          } elseif ($startPunkt>900 && $startPunkt<1000) {
-            $endpunkte = array ($startPunkt-201, $startPunkt-199, $startPunkt+198, $startPunkt+200);
-          } else {
-            $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+200, $startPunkt+198);
-          }
-          $endpunkte = arra_push($endpunkte, $startPunkt+1, $startPunkt-1);
-=======
+
         if ($dame) {
             if ($startPunkt < 700) {
                 $endpunkte = array($startPunkt - 200, $startPunkt - 202, $startPunkt + 200, $startPunkt + 202);
@@ -325,7 +311,7 @@ class SpielFeld
             } else {
                 $endpunkte = array($startPunkt - 200, $startPunkt - 202, $startPunkt + 200, $startPunkt + 198);
             }
->>>>>>> origin/master
+            $endpunkte = array_push($endpunkte, $startPunkt + 1, $startPunkt - 1);
         } else {
             if ($startPunkt < 700) {
                 $endpunkte = array($startPunkt + 200, $startPunkt + 202);
