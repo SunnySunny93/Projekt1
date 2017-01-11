@@ -106,7 +106,7 @@ class SpielFeld
                 //$id = $row . sprintf('%02d', $col);
                 $feldbelegung = $this->felder[$internal_id]->getBelegung();
                 if ($feldbelegung instanceof SpielStein) {
-                    $icon = "<img class=\"spielericon\" src=\"" . $feldbelegung->getIcon() . "\" /> ";
+                    $icon = "<img class=\"spielericon spieler" . $feldbelegung->getSpieler()->getId() . "\" src=\"" . $feldbelegung->getIcon() . "\" /> ";
                 } elseif ($feldbelegung == "Sperrfeld") {
                     $class = "sperrfeld";
                     $icon = "";
@@ -129,6 +129,18 @@ class SpielFeld
         }
         $html .= "</div>";
         return $html;
+    }
+
+    /**
+     * @param array $json
+     */
+    public function javasriptAuswerten($json)
+    {
+        if($json->funktion == "ziehen"){
+            $this->spielerZieht($json->list[0], $json->list[1]);
+        }else{
+            $this->mauerAuswerten($json);
+        }
     }
 
     /**
@@ -314,20 +326,20 @@ class SpielFeld
     /**
      * @param int $start
      * @param int $ziel
-     * @param Spieler $spieler
      */
-    public function spielerZieht($start, $ziel, $spieler)
+    public function spielerZieht($start, $ziel)
     {
-        $haus = $spieler->getId();
         $startbelegung = $this->felder[$start]->getBelegung();
         $zielbelegung = $this->felder[$ziel]->getBelegung();
+        $spieler = $startbelegung->getSpieler();
+        $haus = $spieler->getId();
         if ($startbelegung instanceof SpielStein) {
             if ($zielbelegung == '') {
                 if ($this->isNachbar($start, $ziel, $haus)) {        //Normales Stein ziehen
                     $this->felder[$ziel]->setBelegung($startbelegung);
                     $this->felder[$start]->setBelegung('');
                 } else {
-                    $this->steinSchlagen();
+                    $this->steinSchlagen($start, $ziel, $haus);
                 }
             }
         } else {

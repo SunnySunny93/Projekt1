@@ -8,12 +8,15 @@ if (isset($_SESSION['partie']))
     if($content != "") {
         echo "\n";
         $json = json_decode($content);
-        echo "test".$partie->getSpielfeld()->mauerAuswerten($json);
+        //if($json->funktion == "checkPlayer")
+        echo "test".$partie->getSpielfeld()->javascriptAuswerten($json);
         echo "\n";
         print_r($json);
         echo "\n";
         print_r($partie->getSpielfeld()->felder);
     }else{
-        echo json_encode($partie->karteAuswerten());
+        $json["karte"] = $partie->karteAuswerten();
+        $json["spieler"]  = $partie->getAktuellerSpieler()->getId();
+        echo json_encode($json);
     }
 }
