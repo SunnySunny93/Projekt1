@@ -248,6 +248,22 @@ class SpielFeld
         return false;
       }
     }
+
+    /**
+     * @param int $feldId
+     * @param int $spielerId
+     */
+     public function isRichtigerSpielstein($feldId, $spielerId)
+     {
+        $belegung = $this->felder[$feldId]->getBelegung();
+        $spieler = $this->belegung->getSpieler();
+        if($this->spieler->getId()==$spilerId){
+          return true;
+        } else {
+          return false;
+        }
+     }
+
     /**
      * @param int $start
      * @param int $ziel
@@ -258,7 +274,7 @@ class SpielFeld
         $haus = $spieler->getId();
         $startbelegung = $this->felder[$start]->getBelegung();
         $zielbelegung = $this->felder[$ziel]->getBelegung();
-        if ($startbelegung instanceof SpielStein && ) {
+        if ($startbelegung instanceof SpielStein) {
           if ($zielbelegung == '') {
             if ($this->isNachbar($start, $ziel, $spieler)) {        //Normales Stein ziehen
               $this->felder[$ziel]->setBelegung($startbelegung);
