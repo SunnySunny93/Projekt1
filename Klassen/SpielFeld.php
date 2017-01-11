@@ -294,6 +294,7 @@ class SpielFeld
           } else {
             $endpunkte = array ($startPunkt-200, $startPunkt-202, $startPunkt+200, $startPunkt+198);
           }
+          $endpunkte = arra_push($endpunkte, $startPunkt+1, $startPunkt-1);
         } else {
           if ($startPunkt<700) {
             $endpunkte = array ($startPunkt+200, $startPunkt+202);
