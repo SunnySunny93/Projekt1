@@ -178,10 +178,11 @@ class SpielFeld
     /**
      * @param int $start
      * @param int $ziel
+     * @param Spieler $spieler
      */
-    public function spielerZieht($start, $ziel)
+    public function spielerZieht($start, $ziel, $spieler)
     {
-        //ToDo: JanR
+        $haus = $spieler->getId();
         $startbelegung = $this->felder[$start]->getBelegung();
         $zielbelegung = $this->felder[$ziel]->getBelegung();
 
