@@ -176,7 +176,7 @@ class SpielFeld
     }
 
     /**
-     * @param Spieler $spieler
+     * @param integer $haus
      */
     private function getHaus($haus)
     {
@@ -223,7 +223,7 @@ class SpielFeld
       $haus = $spieler->getId();
       $startid = $this->felder[$start]->getId();
       $zielid = $this->felder[$ziel]->getId();
-      $array = getHaus($haus);
+      $array = $this->getHaus($haus);
 
 
     }
