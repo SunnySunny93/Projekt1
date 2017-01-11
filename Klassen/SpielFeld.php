@@ -6,48 +6,48 @@ class SpielFeld
      * @var array
      */
     private $feldbelegung = array(
-        1 => "Sperrfeld",
+        0 => "Sperrfeld",
+        1 => 0,
         2 => 0,
         3 => 0,
         4 => 0,
         5 => 0,
         6 => 0,
-        7 => 0,
-        8 => "Sperrfeld",
-        17 => 1,
-        27 => 1,
-        38 => 1,
-        50 => 1,
-        63 => 1,
-        77 => 1,
-        92 => "Sperrfeld",
-        9 => 5,
-        18 => 5,
-        28 => 5,
-        39 => 5,
-        51 => 5,
-        64 => 5,
-        78 => "Sperrfeld",
-        93 => 4,
-        107 => 4,
-        120 => 4,
-        132 => 4,
-        143 => 4,
-        153 => 4,
-        162 => "Sperrfeld",
+        7 => "Sperrfeld",
+        16 => 1,
+        26 => 1,
+        37 => 1,
+        49 => 1,
+        62 => 1,
+        76 => 1,
+        91 => "Sperrfeld",
+        8 => 5,
+        17 => 5,
+        27 => 5,
+        38 => 5,
+        50 => 5,
+        63 => 5,
+        77 => "Sperrfeld",
+        92 => 4,
+        106 => 4,
+        119 => 4,
+        131 => 4,
+        142 => 4,
+        152 => 4,
+        161 => "Sperrfeld",
+        162 => 3,
         163 => 3,
         164 => 3,
         165 => 3,
         166 => 3,
         167 => 3,
-        168 => 3,
-        169 => "Sperrfeld",
-        106 => 2,
-        119 => 2,
-        131 => 2,
-        142 => 2,
-        152 => 2,
-        161 => 2);
+        168 => "Sperrfeld",
+        105 => 2,
+        118 => 2,
+        130 => 2,
+        141 => 2,
+        151 => 2,
+        160 => 2);
 
     /**
      * @var Feld[]
@@ -63,14 +63,14 @@ class SpielFeld
     public function __construct($spieler, $felder = NULL, $kartenstapel = NULL)
     {
         if ($felder == NULL) {
-            for ($i = 0; $i < 169; $i++) {
+            for ($i = 0; $i <= 169; $i++) {
                 $this->felder[] = new Feld($i, "");
             }
             foreach ($this->feldbelegung AS $index => $feldbelegung) {
                 if ($feldbelegung !== "Sperrfeld") {
                     $feldbelegung = new SpielStein($spieler[$feldbelegung]);
                 }
-                $this->felder[$index - 1]->setBelegung($feldbelegung);
+                $this->felder[$index]->setBelegung($feldbelegung);
             }
         }
     }
@@ -102,10 +102,9 @@ class SpielFeld
                 $html .= "<div class=\"hex invisible\"><div class=\"top\"></div><div class=\"middle\"></div><div class=\"bottom\"></div></div>";// add invisible hexagons
             }
             for ($col = 1; $col <= $cols; $col++) {
-                $internal_id++;
                 $class = "default";
-                $id = $row . sprintf('%02d', $col);
-                $feldbelegung = $this->felder[$internal_id - 1]->getBelegung();
+                //$id = $row . sprintf('%02d', $col);
+                $feldbelegung = $this->felder[$internal_id]->getBelegung();
                 if ($feldbelegung instanceof SpielStein) {
                     $icon = "<img class=\"spielericon\" src=\"" . $feldbelegung->getIcon() . "\" /> ";
                 } elseif ($feldbelegung == "Sperrfeld") {
@@ -118,6 +117,7 @@ class SpielFeld
                     $icon = "";
                 }
                 $html .= "<div class=\"hex " . $class . "\" id=\"" . $internal_id . "\" ><div class=\"top\"></div><div class=\"middle\" style=\"text-align: center\">" . $icon . "</div><div class=\"bottom\"></div></div>";
+                $internal_id++;
             }
             $html .= $span != 0 ? "<td colspan=$span></td>" : "";
             $html .= "</div>";
@@ -141,20 +141,20 @@ class SpielFeld
         $anzahl = sizeof($liste);
         if (strpos($funktion, "setzen") !== false) {
             for ($i = 0; $i < $anzahl; $i++) {
-                $this->setzen($liste[$i]-1);
+                $this->setzen($liste[$i]);
             }
         }
         if (strpos($funktion, "entfernen") !== false) {
             for ($i = 0; $i < $anzahl; $i++) {
-                $this->entfernen($liste[$i]-1);
+                $this->entfernen($liste[$i]);
             }
         }
         if (strpos($funktion, "verschieben") !== false) {
             for ($i = 0; $i < $anzahl / 2; $i++) {              //geht das mit anzahl/2 ????
-                $this->entfernen($liste[$i]-1);
+                $this->entfernen($liste[$i]);
             }
             for ($i = $anzahl / 2; $i < $anzahl; $i++) {
-                $this->setzen($liste[$i]-1);
+                $this->setzen($liste[$i]);
             }
         }
     }

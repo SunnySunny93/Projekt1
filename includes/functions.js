@@ -7,6 +7,9 @@ ajax_abfrage.onload = function() {                           // funktion nach de
     console.log(response.funktion, response.anzahl);    // debug ausgabe der empfangenen werte
     funktion = response.funktion;                       // funktions variable global abspeichern
     anzahl = response.anzahl;                           // anzahl variable global abspeichern
+    if(funktion == "verschieben") {
+        anzahl = anzahl*2;
+    }
 };
 ajax_abfrage.open("get", "../includes/ajax.php", false);     // methode (get) und zieladresse angeben
 ajax_abfrage.send();                                         // request abschicken
