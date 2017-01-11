@@ -51,5 +51,14 @@ class SpielStein
         return $this->dame;
     }
 
+    /**
+     * @return Spieler
+     */
+    public function getSpieler()
+    {
+        return $this->spieler;
+    }
+
+
 
 }
