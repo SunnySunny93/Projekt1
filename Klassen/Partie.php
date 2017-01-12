@@ -153,6 +153,25 @@ class Partie
         return $html;
     }
 
+    public function getSpielerList() {
+        $spielerliste = $this->getSpieler();
+        $nummer = 1;
+        $spieler_tabelle = "";
+        $spieler_tabelle .= "<table>";
+        $spieler_tabelle .= "    <tr>";
+        $spieler_tabelle .= "        <th>Nummer</th>";
+        $spieler_tabelle .= "        <th>Spieler</th>";
+        $spieler_tabelle .= "    </tr>";
+        foreach ($spielerliste as $spieler) {
+            $spieler_tabelle .= "<tr>";
+            $spieler_tabelle .= "	<td>" . $nummer . "</td><td>" . $spieler->getName() . "</td>";
+            $spieler_tabelle .= "</tr>";
+            $nummer += 1;
+        }
+        $spieler_tabelle .= "</table>";
+        return $spieler_tabelle;
+    }
+
     /**
      * @return string
      */
