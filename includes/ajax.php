@@ -12,6 +12,7 @@ if (isset($_SESSION['partie'])) {
             $partie->naechsterZug();
         }else if($json->funktion == "ziehen"){
             $partie->getSpielfeld()->spielerZieht($json->liste[0], $json->liste[1]);
+            $partie->naechsterZug();
         }else{
             echo "test".$partie->getSpielfeld()->javascriptAuswerten($json);
             echo "\n";
@@ -22,6 +23,7 @@ if (isset($_SESSION['partie'])) {
     }else{
         $json["karte"] = $partie->karteAuswerten();
         $json["spieler"]  = $partie->getAktuellerSpieler()->getId();
+        $json["ablauf"]  = $partie->getSpielfeld()->getAblauf();
         echo json_encode($json);
     }
 }

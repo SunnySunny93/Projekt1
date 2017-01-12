@@ -113,7 +113,13 @@ class Partie
 
     public function getHtml()
     {
-        //ToDo: Spielernamen anzeigen
+        if($this->getSpielfeld()->getAblauf() == "mauer"){
+            $notification = "Bitte Platziere deine Mauern indem du auf die Felder klickst";
+        }elseif($this->getSpielfeld()->getAblauf() == "ziehen"){
+            $notification = "Bitte Ziehe eine deiner Spielfiguren ind dem du zuerst eine figur und dann ein benachbartes Feld anklickst";
+        }else{
+
+        }
         $spielerName = $this->aktuellerSpieler->getName();
         $icon = "<img class=\"spielericon\" src=\"" . $this->aktuellerSpieler->getIcon() . "\" /> ";
         $html = "";
@@ -121,8 +127,8 @@ class Partie
         $html .= "<main>";
         $html .= "  <section id=\"interaktionsmenue\">";
         $html .= "      <header>";
-        $html .= "          <span class=\"status\">$spielerName $icon ist am Zug</span>";
-        //$html .= "          <span class=\"notification\"> $spielerName schlägt einen Gegner!</span>";
+        $html .= "          <span class=\"status\">$spielerName $icon ist am Zug</span><br/>";
+        $html .= "          <span class=\"notification\"> $notification </span>";
         $html .= "      </header>";
         $html .= "      <section id=\"kartenstapel\">";
         $html .=            $this->kartenstapel->getKartenstapelHtml();

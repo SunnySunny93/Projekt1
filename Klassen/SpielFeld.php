@@ -7,6 +7,11 @@ class SpielFeld
     public $felder;
 
     /**
+     * @var string
+     */
+    public $ablauf;
+
+    /**
      * SpielFeld constructor.
      * @param array $spieler
      * @param array $felder
@@ -25,6 +30,7 @@ class SpielFeld
                 $this->felder[$index]->setBelegung($feldbelegung);
             }
         }
+        $this->ablauf = "mauer";
     }
 
     /**
@@ -105,20 +111,32 @@ class SpielFeld
         $anzahl = sizeof($liste);
         if ($funktion == "setzen") {
             for ($i = 0; $i < $anzahl; $i++) {
-                $this->setzen($liste[$i]);
+                if($this->felder[$liste[$i]]->getBelegung() != "Mauer"){
+                    $this->setzen($liste[$i]);
+                    $this->ablauf = "ziehen";
+                }
             }
         }
         if ($funktion == "entfernen") {
             for ($i = 0; $i < $anzahl; $i++) {
-                $this->entfernen($liste[$i]);
+                if($this->felder[$liste[$i]]->getBelegung() == "Mauer"){
+                    $this->entfernen($liste[$i]);
+                    $this->ablauf = "ziehen";
+                }
             }
         }
         if ($funktion == "verschieben") {
             for ($i = 0; $i < $anzahl / 2; $i++) {              //geht das mit anzahl/2 ????
-                $this->entfernen($liste[$i]);
+                if($this->felder[$liste[$i]]->getBelegung() == "Mauer"){
+                    $this->entfernen($liste[$i]);
+                    $this->ablauf = "ziehen";
+                }
             }
             for ($i = $anzahl / 2; $i < $anzahl; $i++) {
-                $this->setzen($liste[$i]);
+                if($this->felder[$liste[$i]]->getBelegung() != "Mauer"){
+                    $this->setzen($liste[$i]);
+                    $this->ablauf = "ziehen";
+                }
             }
         }
     }
@@ -308,6 +326,7 @@ class SpielFeld
                     echo "<br/>";
                     $this->felder[$ziel]->setBelegung($startbelegung);
                     $this->felder[$start]->setBelegung('');
+                    $this->ablauf = "mauer";
                 } else {
                     print_r("kein nachbar");
                     echo "<br/>";
@@ -323,4 +342,13 @@ class SpielFeld
 
 
     }
+
+    /**
+     * @return string
+     */
+    public function getAblauf()
+    {
+        return $this->ablauf;
+    }
+
 }
