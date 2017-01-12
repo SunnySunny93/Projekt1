@@ -28,10 +28,16 @@ function aufgeben()
 
 function hexagon()
 {
+    var current_classes = this.getAttribute("class");
     var klickable = false;
     var movable = false;
     if(this.getElementsByClassName("spielericon").length <= 0){
-        klickable = true;
+        if(wall_count > 0 && current_classes.indexOf("wall") > 0){
+            klickable = false;
+        }else{
+            klickable = true;
+        }
+
     }else if(this.getElementsByClassName("spieler"+spieler).length > 0){
         movable = true;
         if(wall_count > 0){
@@ -40,30 +46,29 @@ function hexagon()
     }else{
         klickable = false;
     }
+    console.log(felder.length);
     console.log(klickable);
 
     if(klickable){
-        var current_classes = this.getAttribute("class");
+
 
         if(current_classes.indexOf("active") > 0){
             current_classes = current_classes.replace(" active", "");
             this.setAttribute("class", current_classes);
             mauern.splice(mauern.indexOf(this), 1);
+            felder.splice(mauern.indexOf(this), 1);
         }else{
             if(document.getElementsByClassName('active').length < anzahl) { // wenn weniger felder aktiv sind als möglich
                 console.log("wall_count: ", wall_count);
                 console.log("movable: ", movable);
-                console.log("length: ", felder.length);
+
+                this.setAttribute("class", current_classes + " active");
                 if(wall_count <= 0){
-                    this.setAttribute("class", current_classes + " active");
                     mauern.push(this);
-                }else if(movable && felder.length <= 0){
-                    this.setAttribute("class", current_classes + " active");
-                    felder = [this]
-                }else if(felder.length > 0){
-                    this.setAttribute("class", current_classes + " active");
+                }else{
                     felder.push(this);
                 }
+                console.log("length: ", felder.length);
             }else{
                 alert("du kannst nur " + anzahl + " felder auswählen");
             }
@@ -73,6 +78,10 @@ function hexagon()
 
 function steinBewegen()
 {
+    var liste = [];
+    for(var i = 0;i < felder.length;i++) {
+        liste.push(felder[i].getAttribute("id"));
+    }
     var ajax_antwort = new XMLHttpRequest();
     ajax_antwort.onload = function() {
         console.log(this.responseText);

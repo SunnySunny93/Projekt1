@@ -249,6 +249,12 @@ class SpielFeld
         $hausArray = $this->getHaus($haus);
         $startPunkt = $hausArray[$startid];
         $zielPunkt = $hausArray[$zielid];
+
+        print_r($startPunkt);
+        echo "<br/>";
+        print_r($zielPunkt);
+        echo "<br/>";
+
         if ($dame) {
             if ($startPunkt < 800) {
                 $nachbarn = array($startPunkt + 1, $startPunkt - 1, $startPunkt + 100, $startPunkt - 100, $startPunkt + 101, $startPunkt - 101); //Potentielle Nachbarn
@@ -262,7 +268,7 @@ class SpielFeld
                 $nachbarn = array($startPunkt + 100, $startPunkt + 99);
             }
         }
-        if (array_search($zielPunkt, $nachbarn) != false) {
+        if (array_search($zielPunkt, $nachbarn) !== false) {
             return true;
         } else {
             return false;
@@ -323,6 +329,11 @@ class SpielFeld
                 $endpunkte = array($startPunkt + 200, $startPunkt + 198);
             }
         }
+        if (array_search($zielPunkt, $endpunkte) !== false) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -335,13 +346,30 @@ class SpielFeld
         $zielbelegung = $this->felder[$ziel]->getBelegung();
         $spieler = $startbelegung->getSpieler();
         $haus = $spieler->getId();
+        print_r($startbelegung);
+        echo "<br/>";
+        print_r($zielbelegung);
+        echo "<br/>";
+        print_r($haus);
+        echo "<br/>";
         if ($startbelegung instanceof SpielStein) {
+            print_r("spielstein");
+            echo "<br/>";
             if ($zielbelegung == '') {
+                print_r("ziel leer");
+                echo "<br/>";
                 if ($this->isNachbar($start, $ziel, $haus)) {        //Normales Stein ziehen
+                    print_r("nachbar");
+                    echo "<br/>";
                     $this->felder[$ziel]->setBelegung($startbelegung);
                     $this->felder[$start]->setBelegung('');
                 } else {
-                    $this->steinSchlagen($start, $ziel, $haus);
+                    print_r("kein nachbar");
+                    echo "<br/>";
+                    /*if($this->steinSchlagen($start, $ziel, $haus)){
+                        $this->felder[$ziel]->setBelegung($startbelegung);
+                        $this->felder[$start]->setBelegung('');
+                    }*/
                 }
             }
         } else {

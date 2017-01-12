@@ -115,19 +115,22 @@ class Partie
     {
         //ToDo: Spielernamen anzeigen
         $spielerName = $this->aktuellerSpieler->getName();
+        $icon = "<img class=\"spielericon\" src=\"" . $this->aktuellerSpieler->getIcon() . "\" /> ";
         $html = "";
 
         $html .= "<main>";
         $html .= "  <section id=\"interaktionsmenue\">";
         $html .= "      <header>";
-        $html .= "          <span class=\"status\">$spielerName ist am Zug</span>";
-        $html .= "          <span class=\"notification\"> $spielerName schlägt einen Gegner!</span>";
+        $html .= "          <span class=\"status\">$spielerName $icon ist am Zug</span>";
+        //$html .= "          <span class=\"notification\"> $spielerName schlägt einen Gegner!</span>";
         $html .= "      </header>";
         $html .= "      <section id=\"kartenstapel\">";
         $html .=            $this->kartenstapel->getKartenstapelHtml();
         $html .= "      </section>";
         $html .= "      <menu id=\"spielsteuerung\">";
         $html .= "          <button onclick=\"mauerFestlegen()\">Mauer so platzieren?</button>";
+        $html .= "          <br/>";
+        $html .= "          <button onclick=\"steinBewegen()\">Stein Bewegen</button>";
         $html .= "          <br/>";
         $html .= "          <button onclick=\"zugBeenden()\">Zug beenden!</button>";
         $html .= "          <br/>";
