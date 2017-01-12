@@ -1,4 +1,5 @@
 <?php
+require_once "../includes/globals.php";
 require_once "../Klassen/Feld.php";
 require_once "../Klassen/Karte.php";
 require_once "../Klassen/Kartenstapel.php";

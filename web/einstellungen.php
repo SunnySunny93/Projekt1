@@ -21,11 +21,11 @@
 			<form action= "Gruppen_de/Regeln.html">
 				<input type="submit" value="Zu den Regeln">
 			</form>
-			<?php include("Gruppen_de/Spielstein.html"); ?>
+			<?php include("../includes/Spielstein.html"); ?>
 
 
 			<!-- IV Spiel starten -->
-			<?php include("Gruppen_de/SpielStarten.php"); ?>
+			<?php include("../includes/SpielStarten.php"); ?>
 		</main>
 	</body>
 </html>
